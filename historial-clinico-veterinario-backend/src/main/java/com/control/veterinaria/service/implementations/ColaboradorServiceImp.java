@@ -20,32 +20,33 @@ public class ColaboradorServiceImp implements ColaboradorService {
 
 	@Override
 	public List<Colaborador> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
 	}
 
 	@Override
 	public Optional<Colaborador> findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findById(id);
+	}
+	
+	@Override
+	public boolean ExistById(int id) {
+		return repo.existsById(id);
 	}
 
 	@Override
 	public void deleteById(int id) {
-		// TODO Auto-generated method stub
-		
+		repo.deleteById(id);
 	}
 
 	@Override
 	public void save(Colaborador colaborador) {
-		// TODO Auto-generated method stub
+		repo.save(colaborador);
 		
 	}
 
 	@Override
 	public void delete(Colaborador colaborador) {
-		// TODO Auto-generated method stub
-		
+		repo.delete(colaborador);
 	}
 
 }

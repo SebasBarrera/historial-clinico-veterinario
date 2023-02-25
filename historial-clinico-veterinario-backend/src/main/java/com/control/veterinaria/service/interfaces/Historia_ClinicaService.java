@@ -11,4 +11,5 @@ public interface Historia_ClinicaService {
 	public void deleteById(int id);
 	public void delete(Historia_Clinica historia);
 	public void save(Historia_Clinica historia);
+	boolean ExistById(int id);
 }

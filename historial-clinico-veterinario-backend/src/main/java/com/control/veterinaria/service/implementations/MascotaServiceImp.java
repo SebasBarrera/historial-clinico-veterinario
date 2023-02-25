@@ -21,7 +21,7 @@ public class MascotaServiceImp implements MascotaService {
 	@Override
 	public List<Mascota> findAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
 	}
 
 	@Override
@@ -32,26 +32,27 @@ public class MascotaServiceImp implements MascotaService {
 
 	@Override
 	public Optional<Mascota> findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return  repo.findById(id);
+	}
+	
+	@Override
+	public boolean ExistById(int id) {
+		return repo.existsById(id);
 	}
 
 	@Override
 	public void deleteById(int id) {
-		// TODO Auto-generated method stub
-		
+		repo.deleteById(id);
 	}
 
 	@Override
 	public void delete(Mascota mascota) {
-		// TODO Auto-generated method stub
-		
+		repo.delete(mascota);
 	}
 
 	@Override
 	public void save(Mascota mascota) {
-		// TODO Auto-generated method stub
-		
+		repo.save(mascota);
 	}
 
 }

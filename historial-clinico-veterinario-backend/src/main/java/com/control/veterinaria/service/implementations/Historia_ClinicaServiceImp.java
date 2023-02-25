@@ -25,26 +25,27 @@ public class Historia_ClinicaServiceImp implements com.control.veterinaria.servi
 
 	@Override
 	public Optional<Historia_Clinica> findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return  repo.findById(id);
+	}
+	
+	@Override
+	public boolean ExistById(int id) {
+		return repo.existsById(id);
 	}
 
 	@Override
 	public void deleteById(int id) {
-		// TODO Auto-generated method stub
-		
+		repo.deleteById(id);
 	}
 
 	@Override
 	public void delete(Historia_Clinica historia) {
-		// TODO Auto-generated method stub
-		
+		repo.delete(historia);
 	}
 
 	@Override
 	public void save(Historia_Clinica historia) {
-		// TODO Auto-generated method stub
-		
+		repo.save(historia);
 	}
 
 }

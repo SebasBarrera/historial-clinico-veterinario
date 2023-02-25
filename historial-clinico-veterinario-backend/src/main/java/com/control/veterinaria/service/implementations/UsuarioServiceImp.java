@@ -20,32 +20,32 @@ public class UsuarioServiceImp implements UsuarioService {
 
 	@Override
 	public List<Usuario> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
 	}
 
 	@Override
 	public Optional<Usuario> findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return  repo.findById(id);
+	}
+	
+	@Override
+	public boolean ExistById(int id) {
+		return repo.existsById(id);
 	}
 
 	@Override
 	public void deleteById(int id) {
-		// TODO Auto-generated method stub
-		
+		repo.deleteById(id);
 	}
 
 	@Override
 	public void delete(Usuario usuario) {
-		// TODO Auto-generated method stub
-		
+		repo.delete(usuario);
 	}
 
 	@Override
 	public void save(Usuario usuario) {
-		// TODO Auto-generated method stub
-		
+		repo.save(usuario);
 	}
 
 }
