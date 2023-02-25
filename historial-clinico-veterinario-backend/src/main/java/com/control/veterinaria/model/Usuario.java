@@ -1,6 +1,7 @@
 package com.control.veterinaria.model;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,6 @@ import javax.persistence.UniqueConstraint;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,19 +29,19 @@ public class Usuario {
 	@SequenceGenerator(name = "USUARIO_ID_GENERATOR", allocationSize = 1, sequenceName = "USUARIO_SEQ")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USUARIO_ID_GENERATOR")
 	private int id;
-	@NotNull
+	@Column(nullable = false)
 	private String nombre;
-	@NotNull
+	@Column(nullable = false)
 	private String apellido;
-	@NotNull
+	@Column(nullable = false)
 	private String tipo_documento;
-	@NotNull
+	@Column(nullable = false, unique = true)
 	private int documento_identificacion;
-	@NotNull
+	@Column(nullable = false)
 	private String estado;
-	@NotNull
+	@Column(nullable = false)
 	private int sexo;
-	@NotNull
+	@Column(nullable = false)
 	@OneToMany(mappedBy = "Usuario")
 	@JsonIgnore
 	private List<Mascota> mascotas;

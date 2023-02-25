@@ -3,6 +3,7 @@ package com.control.veterinaria.model;
 
 import java.time.LocalTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +15,6 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,27 +30,27 @@ public class Detalle_Historia_Clinica {
 	@SequenceGenerator(name = "DETALLE_HISTORIA_CLINICA_ID_GENERATOR", allocationSize = 1, sequenceName = "DETALLE_HISTORIA_CLINICA_SEQ")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DETALLE_HISTORIA_CLINICA_ID_GENERATOR")
 	private int id;
-	@NotNull
+	@Column(nullable = false)
 	private String temperatura;
-	@NotNull
+	@Column(nullable = false)
 	private double peso;
-	@NotNull
+	@Column(nullable = false)
 	private double frecuencia_cardiaca;
-	@NotNull
+	@Column(nullable = false)
 	private double frecuencia_respiratoria;
-	@NotNull
+	@Column(nullable = false)
 	private LocalTime fecha_hora;
-	@NotNull
+	@Column(nullable = false)
 	private String alimentacion;
-	@NotNull
+	@Column(nullable = false)
 	private String habitad;
-	@NotNull
+	@Column(nullable = false)
 	private String observacion;
-	@NotNull
+	@Column(nullable = false)
 	@ManyToOne
 	@JoinColumn(name="historia_clinica_id")
 	private Historia_Clinica historias_clinicas;
-	@NotNull
+	@Column(nullable = false)
 	@OneToOne
 	@JoinColumn(name="colaborador_id")
 	private Colaborador colaborador;

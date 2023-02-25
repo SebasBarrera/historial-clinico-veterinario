@@ -1,5 +1,6 @@
 package com.control.veterinaria.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,7 +9,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,16 +24,17 @@ public class Colaborador {
 	@SequenceGenerator(name = "COLABORADOR_ID_GENERATOR", allocationSize = 1, sequenceName = "COLABORADOR_SEQ")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "COLABORADOR_ID_GENERATOR")
 	private int id;
-	@NotNull
+	@Column(nullable = false)
 	private String nombre;
-	@NotNull
+	@Column(nullable = false)
 	private String apellido;
-	@NotNull
+	@Column(nullable = false)
 	private String cargo;
+	@Column(nullable = true)
 	private String especialidad;
-	@NotNull
+	@Column(nullable = false)
 	private String tipo_documento;
-	@NotNull
+	@Column(nullable = false, unique = true)
 	private int documento_identificacion;
 	
 }

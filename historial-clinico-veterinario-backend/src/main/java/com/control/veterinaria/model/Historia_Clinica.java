@@ -2,6 +2,7 @@ package com.control.veterinaria.model;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +16,6 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,11 +31,11 @@ public class Historia_Clinica {
 	@SequenceGenerator(name = "HISTORIA_CLINICA_ID_GENERATOR", allocationSize = 1, sequenceName = "HISTORIA_CLINICA_SEQ")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "HISTORIA_CLINICA_ID_GENERATOR")
 	private int id;
-	@NotNull
+	@Column(nullable = false)
 	@OneToOne
 	@JoinColumn(name="mascota_id")
 	private Mascota mascota;
-	@NotNull
+	@Column(nullable = false)
 	@OneToMany(mappedBy = "Historia_Clinica")
 	@JsonIgnore
 	private List<Detalle_Historia_Clinica> detallesHistoriaClinica;
