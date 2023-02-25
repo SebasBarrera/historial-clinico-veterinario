@@ -1,0 +1,57 @@
+package com.control.veterinaria.service.implementations;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.control.veterinaria.model.Colaborador;
+import com.control.veterinaria.repository.ColaboradorRepository;
+import com.control.veterinaria.service.interfaces.ColaboradorService;
+
+@Service
+@Transactional
+public class ColaboradorServiceImp implements ColaboradorService {
+	
+	@Autowired
+	private ColaboradorRepository repo;
+	
+	
+	public ColaboradorServiceImp(ColaboradorRepository repo) {
+		this.repo = repo;
+	}
+
+	@Override
+	public List<Colaborador> findAll() {
+		return (List<Colaborador>) repo.findAll();
+	}
+
+	@Override
+	public Optional<Colaborador> findById(int id) {
+		return repo.findById(id);
+	}
+	
+	@Override
+	public boolean ExistById(int id) {
+		return repo.existsById(id);
+	}
+
+	@Override
+	public void deleteById(int id) {
+		repo.deleteById(id);
+	}
+
+	@Override
+	public void save(Colaborador colaborador) {
+		repo.save(colaborador);
+		
+	}
+
+	@Override
+	public void delete(Colaborador colaborador) {
+		repo.delete(colaborador);
+	}
+
+}
