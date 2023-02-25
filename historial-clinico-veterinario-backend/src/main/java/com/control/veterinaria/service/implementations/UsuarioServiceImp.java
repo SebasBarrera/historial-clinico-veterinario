@@ -1,0 +1,51 @@
+package com.control.veterinaria.service.implementations;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.control.veterinaria.model.Usuario;
+import com.control.veterinaria.repository.interfaces.UsuarioRepository;
+import com.control.veterinaria.service.interfaces.UsuarioService;
+
+@Service
+@Transactional
+public class UsuarioServiceImp implements UsuarioService {
+	
+	@Autowired
+	private UsuarioRepository repo;
+
+	@Override
+	public List<Usuario> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Usuario> findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Usuario usuario) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void save(Usuario usuario) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

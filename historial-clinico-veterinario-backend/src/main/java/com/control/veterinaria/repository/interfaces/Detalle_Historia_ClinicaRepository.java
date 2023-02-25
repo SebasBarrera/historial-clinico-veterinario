@@ -1,4 +1,4 @@
-package com.control.veterinaria.repository;
+package com.control.veterinaria.repository.interfaces;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
