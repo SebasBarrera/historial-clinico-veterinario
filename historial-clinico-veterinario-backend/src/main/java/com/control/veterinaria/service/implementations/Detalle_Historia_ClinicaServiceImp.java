@@ -1,5 +1,6 @@
 package com.control.veterinaria.service.implementations;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,14 +21,18 @@ public class Detalle_Historia_ClinicaServiceImp implements Detalle_Historia_Clin
 
 	@Override
 	public List<Detalle_Historia_Clinica> findAll() {
-		// TODO Auto-generated method stub
-		return (List<Detalle_Historia_Clinica>) repo.findAll();
+		return repo.findAll();
 	}
 
 	@Override
 	public List<Detalle_Historia_Clinica> findAllById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Detalle_Historia_Clinica> detalles = new ArrayList<Detalle_Historia_Clinica>();
+		List<Detalle_Historia_Clinica> todosDetalles = repo.findAll();
+		for (int i = 0; i < todosDetalles.size(); i++) {
+			if (todosDetalles.get(i).getHistorias_clinicas().getId() == id )
+				detalles.add(todosDetalles.get(i));
+		}
+		return detalles;
 	}
 
 	@Override

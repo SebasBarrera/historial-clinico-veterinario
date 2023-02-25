@@ -21,7 +21,7 @@ public class MascotaServiceImp implements MascotaService {
 
 	@Override
 	public List<Mascota> findAll() {
-		return (List<Mascota>) repo.findAll();
+		return repo.findAll();
 	}
 	
 	// TODO cambiar por DAOS para mejor optimización
