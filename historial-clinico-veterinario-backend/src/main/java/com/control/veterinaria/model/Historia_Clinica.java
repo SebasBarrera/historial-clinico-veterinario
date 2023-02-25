@@ -2,17 +2,16 @@ package com.control.veterinaria.model;
 
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.NamedQuery;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -31,12 +30,10 @@ public class Historia_Clinica {
 	@SequenceGenerator(name = "HISTORIA_CLINICA_ID_GENERATOR", allocationSize = 1, sequenceName = "HISTORIA_CLINICA_SEQ")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "HISTORIA_CLINICA_ID_GENERATOR")
 	private int id;
-	@Column(nullable = false)
 	@OneToOne
 	@JoinColumn(name="mascota_id")
 	private Mascota mascota;
-	@Column(nullable = false)
-	@OneToMany(mappedBy = "Historia_Clinica")
+	@OneToMany(mappedBy = "id")
 	@JsonIgnore
 	private List<Detalle_Historia_Clinica> detallesHistoriaClinica;
 }
