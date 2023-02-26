@@ -57,7 +57,7 @@ public class MascotaControllerImp implements MascotaController {
 	}
 	
 	@Override
-	@GetMapping("/{id}")
+	@GetMapping("/por-usuario/{id}")
 	public List<Mascota> findByUserId(@PathVariable("id") Integer id) {
 		return service.findAllById(id);
 	}
