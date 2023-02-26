@@ -1,0 +1,5 @@
+package com.control.veterinaria.service.interfaces;
+
+public class Historia_ClinicaService {
+
+}

@@ -1,0 +1,16 @@
+package com.control.veterinaria.boot;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.control.veterinaria.repository.ColaboradorRepository;
+
+@Configuration
+@ComponentScan(basePackages = {"com.control.veterinaria"})
+public class AppConfig {
+	@Bean
+	public ColaboradorRepository colaboradorRepository() {
+		return new Colabo
+	}
+}

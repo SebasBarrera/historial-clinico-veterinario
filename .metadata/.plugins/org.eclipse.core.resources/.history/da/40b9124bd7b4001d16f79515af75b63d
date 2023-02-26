@@ -1,0 +1,11 @@
+package com.control.veterinaria.model;
+import javax.persistance.Entity;
+import javax.persistance.NamedQuery;
+import lombok.Data;
+
+@Data
+@Entity
+@NamedQuery
+public class Usuario {
+	
+}

@@ -1,0 +1,5 @@
+package com.control.veterinaria.controller.interfaces;
+
+public interface Detalle_Historia_ClinicaController {
+
+}

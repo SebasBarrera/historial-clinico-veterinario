@@ -1,0 +1,5 @@
+package com.control.veterinaria.service.implementations;
+
+public class Historia_ClinicaServiceImp implements com.control.veterinaria.service.interfaces.Historia_ClinicaService {
+
+}

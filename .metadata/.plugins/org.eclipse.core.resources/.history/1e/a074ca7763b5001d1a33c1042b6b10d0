@@ -1,0 +1,16 @@
+package com.control.veterinaria.controller.implementations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.control.veterinaria.controller.interfaces.Historia_ClinicaController;
+import com.control.veterinaria.service.interfaces.Historia_ClinicaService;
+
+@RestController
+@RequestMapping("/api/historia-clinica")
+public class Historia_ClinicaControllerImp implements Historia_ClinicaController{
+	
+	@Autowired
+	private Historia_ClinicaService service;
+}

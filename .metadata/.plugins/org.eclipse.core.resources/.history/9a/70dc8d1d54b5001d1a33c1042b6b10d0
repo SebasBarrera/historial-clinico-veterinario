@@ -1,0 +1,16 @@
+package com.control.veterinaria.service.interfaces;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.control.veterinaria.model.Mascota;
+
+public interface MascotaService {
+	public List<Mascota> findAll();
+	public List<Integer> findAllById(int id);
+	public Optional<Mascota> findById(int id);
+	public void deleteById(int id);
+	public void delete(Mascota mascota);
+	public void save(Mascota mascota);
+	boolean ExistById(int id);
+}

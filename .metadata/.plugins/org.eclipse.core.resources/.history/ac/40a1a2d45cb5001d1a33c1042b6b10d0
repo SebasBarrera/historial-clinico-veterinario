@@ -1,0 +1,47 @@
+package com.control.veterinaria.businessDelegate.implementations;
+
+import java.util.List;
+
+import com.control.veterinaria.businessDelegate.interfaces.ColaboradorBusinessDelegate;
+import com.control.veterinaria.model.Colaborador;
+
+@Component
+public class ColaboradorBusinessDelegateImp implements ColaboradorBusinessDelegate {
+
+	@Override
+	public List<Colaborador> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Colaborador findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(Colaborador colaborador) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Colaborador colaborador) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Colaborador colaborador) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

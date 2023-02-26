@@ -1,0 +1,40 @@
+package com.control.veterinaria.controller.implementations;
+
+import java.util.Optional;
+
+import com.control.veterinaria.controller.interfaces.ColaboradorController;
+import com.control.veterinaria.model.Colaborador;
+
+public class ColaboradorControllerImp implements ColaboradorController {
+
+	@Override
+	public void save(Colaborador colaborador) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(int id, Colaborador colaborador) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Optional<Colaborador> findById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterable<Colaborador> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

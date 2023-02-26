@@ -1,0 +1,8 @@
+spring.jpa.database=POSTGRESQL
+spring.datasource.url=jdbc:postgresql://localhost:5432/historial-clinico-veterinario
+spring.datasource.username=postgres
+spring.datasource.password=Val99530
+spring.jpa.show-sql=true
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true

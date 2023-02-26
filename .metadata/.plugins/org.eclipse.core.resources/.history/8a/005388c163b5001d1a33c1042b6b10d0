@@ -1,0 +1,57 @@
+package com.control.veterinaria.controller.implementations;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.control.veterinaria.controller.interfaces.Detalle_Historia_ClinicaController;
+import com.control.veterinaria.model.Detalle_Historia_Clinica;
+import com.control.veterinaria.service.interfaces.Detalle_Historia_ClinicaService;
+
+@RestController
+@RequestMapping("/api/detalle-historia-clinica")
+public class Detalle_Historia_ClinicaControllerImp implements Detalle_Historia_ClinicaController{
+	
+	@Autowired
+	private Detalle_Historia_ClinicaService service;
+
+	@Override
+	@PostMapping("/")
+	public void save(Detalle_Historia_Clinica detalle) {
+		service.save(detalle)
+	}
+
+	@Override
+	@DeleteMapping("/{id}")
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	@GetMapping("/{id}")
+	public Optional<Detalle_Historia_Clinica> findById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	@GetMapping("/")
+	public Iterable<Detalle_Historia_Clinica> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	@PutMapping("/{id}")
+	public void update(Integer id, Detalle_Historia_Clinica detalle) {
+		// TODO Auto-generated method stub
+		
+	}
+}

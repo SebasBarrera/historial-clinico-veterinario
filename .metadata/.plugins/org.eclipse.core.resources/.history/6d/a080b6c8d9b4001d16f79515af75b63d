@@ -1,0 +1,5 @@
+package com.control.veterinaria.model;
+
+public class Mascota {
+
+}

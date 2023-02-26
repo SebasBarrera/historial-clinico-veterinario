@@ -1,0 +1,9 @@
+package com.control.veterinaria.service.interfaces;
+
+import java.util.List;
+
+import com.control.veterinaria.model.Colaborador;
+
+public interface ColaboradorService {
+	public List<Colaborador> findAll();
+}

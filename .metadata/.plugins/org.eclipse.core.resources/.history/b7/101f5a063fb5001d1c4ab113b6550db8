@@ -1,0 +1,40 @@
+package com.control.veterinaria.service.implementations;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.control.veterinaria.model.Historia_Clinica;
+
+public class Historia_ClinicaServiceImp implements com.control.veterinaria.service.interfaces.Historia_ClinicaService {
+
+	@Override
+	public List<Historia_Clinica> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Historia_Clinica> findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Historia_Clinica historia) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void save(Historia_Clinica historia) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

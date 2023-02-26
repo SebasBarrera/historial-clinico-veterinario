@@ -1,0 +1,50 @@
+package com.control.veterinaria.controller.implementations;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.control.veterinaria.controller.interfaces.ColaboradorController;
+import com.control.veterinaria.model.Colaborador;
+import com.control.veterinaria.service.interfaces.ColaboradorService;
+
+@RestController
+@RequestMapping("/api/address")
+public class ColaboradorControllerImp implements ColaboradorController {
+
+	@Autowired
+	private ColaboradorService service;
+	
+	@Override
+	public void save(Colaborador colaborador) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(int id, Colaborador colaborador) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Optional<Colaborador> findById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterable<Colaborador> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

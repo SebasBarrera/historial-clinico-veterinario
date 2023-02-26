@@ -1,0 +1,11 @@
+package com.control.veterinaria.controller.interfaces;
+
+public interface ColaboradorController {
+	public void save(Colaborador colaborador);
+	public void update(int id, Area a);
+	public void delete(Integer id);
+	public Optional<Area> findById(Integer id);
+	public Iterable<Area> findAll();
+	public ArrayList<String> descriptions(Area a);
+	public Iterable<String> getBookingsFromDay( Integer id);
+}

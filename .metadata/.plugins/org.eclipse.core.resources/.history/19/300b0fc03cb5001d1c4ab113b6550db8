@@ -1,0 +1,5 @@
+package com.control.veterinaria.service.interfaces;
+
+public interface ColaboradorService {
+	public List<Colaborador> findAll();
+}

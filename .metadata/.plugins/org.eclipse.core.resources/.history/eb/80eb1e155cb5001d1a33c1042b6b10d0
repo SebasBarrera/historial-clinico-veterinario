@@ -1,0 +1,9 @@
+package com.control.veterinaria.businessDelegate.interfaces;
+
+import java.util.List;
+
+import com.control.veterinaria.model.Colaborador;
+
+public interface ColaboradorBusinessDelegate {
+	public List<Colaborador> findAll();
+}

@@ -1,0 +1,10 @@
+package com.control.veterinaria.controller.implementations;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/detalle-historia-clinica")
+public class Detalle_Historia_ClinicaControllerImp {
+
+}
