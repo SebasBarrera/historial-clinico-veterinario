@@ -1,0 +1,91 @@
+package com.control.veterinaria.controller.implementations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.control.veterinaria.businessDelegate.interfaces.UsuarioBusinessDelegate;
+import com.control.veterinaria.model.Usuario;
+
+@Controller
+public class UsuarioController implements com.control.veterinaria.controller.interfaces.UsuarioController {
+	
+	@Autowired
+	private UsuarioBusinessDelegate businessDelegate;
+	
+	@Override
+	@GetMapping("/usuario/add")
+	public String add(Model model) {
+		model.addAttribute("usuario", new Usuario());
+		return "usuario/add";
+	}
+
+	@Override
+	@GetMapping("/usuario/delete/{id}")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		businessDelegate.deleteById(id);
+		model.addAttribute("usuarioes", businessDelegate.findAll());
+		return "usuario/index";
+	}
+
+	@Override
+	@GetMapping("/usuario/")
+	public String index(Model model) {
+		model.addAttribute("usuarioes", businessDelegate.findAll());
+		return "usuario/index";
+	}
+
+	@Override
+	@PostMapping("/usuario/add")
+	public String save(@ModelAttribute Usuario usuario, BindingResult bindingResult,
+			Model model, @RequestParam(value = "action", required = true) String action) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("usuario", usuario);
+				return "usuario/add";
+			}
+			businessDelegate.save(usuario);
+		}
+		return "redirect:/usuario/";
+	}
+
+	@Override
+	@GetMapping("/usuario/edit/{id}")
+	public String show(@PathVariable("id") Integer id, Model model) {
+		Usuario usuario = businessDelegate.findById(id);
+		if (usuario == null)
+			throw new IllegalAccessError("Invalid usuario Id: " + id);
+		model.addAttribute("usuario", usuario);
+		return "usuario/edit";
+	}
+
+	@Override
+	@PostMapping("/usuario/edit/{id}")
+	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
+			@ModelAttribute Usuario usuario, BindingResult bindingResult, Model model) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("usuario", usuario);
+				return "usuario/edit";
+			}
+			businessDelegate.update(usuario);
+			model.addAttribute("usuarioes", businessDelegate.findAll());
+		}
+		return "redirect:/usuario/";
+	}
+
+	@Override
+	@GetMapping("/usuario/info/{id}")
+	public String info(@PathVariable("id") Integer id, Model model) {
+		Usuario usuario = businessDelegate.findById(id);
+		model.addAttribute("usuario", usuario);
+		return "usuario/info";
+	}
+
+}

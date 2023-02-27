@@ -1,0 +1,14 @@
+package com.control.veterinaria.controller.implementations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.control.veterinaria.businessDelegate.interfaces.Historia_ClinicaBusinessDelegate;
+
+@Controller
+public class Historia_ClinicaControllerImp {
+
+	@Autowired
+	private Historia_ClinicaBusinessDelegate businessDelegate;
+	
+}

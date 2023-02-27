@@ -1,0 +1,67 @@
+package com.control.veterinaria.businessDelegate.implementations;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
+import com.control.veterinaria.businessDelegate.interfaces.Detalle_Historia_ClinicaBusinessDelegate;
+import com.control.veterinaria.model.Detalle_Historia_Clinica;
+
+@Component
+public class Detalle_Historia_ClinicaBusinessDelegateImp implements Detalle_Historia_ClinicaBusinessDelegate {
+	
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	public Detalle_Historia_ClinicaBusinessDelegateImp() {
+		restTemplate = new RestTemplate();
+		List<HttpMessageConverter<?>> messageConverters = new ArrayList<>();
+        MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
+        converter.setSupportedMediaTypes(Collections.singletonList(MediaType.APPLICATION_JSON));
+        messageConverters.add(converter);
+        this.restTemplate.setMessageConverters(messageConverters);
+	}
+
+	@Override
+	public List<Detalle_Historia_Clinica> findAll() {
+		return Arrays.asList(restTemplate.getForObject(URL, Detalle_Historia_Clinica[].class));
+	}
+
+	@Override
+	public Detalle_Historia_Clinica findById(Integer id) {
+		return restTemplate.getForObject(URL+ id, Detalle_Historia_Clinica.class);
+	}
+
+	@Override
+	public Detalle_Historia_Clinica save(Detalle_Historia_Clinica detalle) {
+		HttpEntity<Detalle_Historia_Clinica> http = new HttpEntity<Detalle_Historia_Clinica>(colaborador);
+		return restTemplate.postForObject(URL, http, Detalle_Historia_Clinica.class);
+	}
+
+	@Override
+	public Detalle_Historia_Clinica update(Detalle_Historia_Clinica detalle) {
+		HttpEntity<Detalle_Historia_Clinica> http = new HttpEntity<Detalle_Historia_Clinica>(colaborador);
+		return restTemplate.exchange(
+				URL + detalle.getId(), 
+				HttpMethod.PUT, 
+				http, 
+				Detalle_Historia_Clinica.class,
+				detalle.getId())
+				.getBody();
+	}
+
+	@Override
+	public void deleteById(Integer id) {
+		restTemplate.delete(URL + id, Integer.class);
+	}
+}

@@ -1,0 +1,55 @@
+package com.control.veterinaria.controller.implementations;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.control.veterinaria.controller.interfaces.ColaboradorController;
+import com.control.veterinaria.model.Colaborador;
+import com.control.veterinaria.service.interfaces.ColaboradorService;
+
+@RestController
+@RequestMapping("/api/colaborador")
+public class ColaboradorControllerImp implements ColaboradorController {
+
+	@Autowired
+	private ColaboradorService service;
+	
+	@Override
+	@PostMapping("/")
+	public void save(@RequestBody Colaborador colaborador) {
+		service.save(colaborador);
+	}
+
+	@Override
+	@DeleteMapping("/{id}")
+	public void delete(@PathVariable("id") Integer id) {
+		service.deleteById(id);
+	}
+
+	@Override
+	@GetMapping("/{id}")
+	public Optional<Colaborador> findById(@PathVariable("id") Integer id) {
+		return service.findById(id);
+	}
+
+	@Override
+	@GetMapping("/")
+	public Iterable<Colaborador> findAll() {
+		return service.findAll();
+	}
+	
+	@Override
+	@PutMapping("/{id}")
+	public void update(@PathVariable("id") Integer id, @RequestBody Colaborador colaborador) {
+		service.save(colaborador);
+	}
+}

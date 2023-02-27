@@ -1,0 +1,15 @@
+package com.control.veterinaria.controller.implementations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.control.veterinaria.businessDelegate.interfaces.ColaboradorBusinessDelegate;
+import com.control.veterinaria.businessDelegate.interfaces.UsuarioBusinessDelegate;
+
+@Controller
+public class UsuarioController {
+	
+	@Autowired
+	private UsuarioBusinessDelegate businessDelegate;
+
+}

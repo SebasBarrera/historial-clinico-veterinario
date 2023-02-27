@@ -1,0 +1,78 @@
+package com.control.veterinaria.controller.implementations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.control.veterinaria.businessDelegate.interfaces.ColaboradorBusinessDelegate;
+import com.control.veterinaria.controller.interfaces.ColaboradorController;
+import com.control.veterinaria.model.Colaborador;
+
+@Controller
+public class ColaboradorControllerImp implements ColaboradorController {
+	
+	@Autowired
+	private ColaboradorBusinessDelegate businessDelegate;
+
+	@Override
+	@GetMapping("/colaborador/add")
+	public String add(Model model) {
+		model.addAttribute("colaborador", new Colaborador());
+		return "colaborador/add";
+	}
+
+	@Override
+	@GetMapping("/colaborador/delete/{id}")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		businessDelegate.deleteById(id);
+		model.addAttribute("persons", businessDelegate.findAll());
+		return "colaborador/index";
+	}
+
+	@Override
+	@GetMapping("/colaborador/")
+	public String index(Model model) {
+		model.addAttribute("colaboradores", businessDelegate.findAll());
+		return "colaborador/index";
+	}
+
+	@Override
+	@PostMapping("/person/addPerson")
+	public String save(@ModelAttribute Colaborador colaborador, BindingResult bindingResult, Model model, @RequestParam(value = "action", required = true) String action) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("colaborador", colaborador);
+				return "person/addPerson";
+			}
+			businessDelegate.addPerson(colaborador);
+		}
+		return "redirect:/person/";
+	}
+
+	@Override
+	public String show(Integer id, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String update(Integer id, String action, Colaborador colaborador, BindingResult b, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String info(Integer businessentityid, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

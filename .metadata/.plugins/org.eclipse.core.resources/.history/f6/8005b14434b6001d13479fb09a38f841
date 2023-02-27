@@ -1,0 +1,32 @@
+package com.control.veterinaria.businessDelegate.implementations;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
+import com.control.veterinaria.businessDelegate.interfaces.ColaboradorBusinessDelegate;
+
+@Component
+public class ColaboradorBusinessDelegateImp implements ColaboradorBusinessDelegate {
+	
+	private final static String URL = "http://localhost:8080/api/colaborador/";
+	
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	public ColaboradorBusinessDelegateImp() {
+		restTemplate = new RestTemplate();
+		List<HttpMessageConverter<?>> messageConverters = new ArrayList<>();
+        MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
+        converter.setSupportedMediaTypes(Collections.singletonList(MediaType.APPLICATION_JSON));
+        messageConverters.add(converter);
+        this.restTemplate.setMessageConverters(messageConverters);s
+	}
+}

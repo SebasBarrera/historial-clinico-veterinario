@@ -1,0 +1,67 @@
+package com.control.veterinaria.controller.implementations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.control.veterinaria.businessDelegate.interfaces.ColaboradorBusinessDelegate;
+import com.control.veterinaria.controller.interfaces.ColaboradorController;
+import com.control.veterinaria.model.Colaborador;
+
+@Controller
+public class ColaboradorControllerImp implements ColaboradorController {
+	
+	@Autowired
+	private ColaboradorBusinessDelegate businessDelegate;
+
+	@Override
+	@GetMapping("/colaborador/add")
+	public String add(Model model) {
+		model.addAttribute("colaborador", new Colaborador());
+		return "colaborador/add";
+	}
+
+	@Override
+	@GetMapping("/colaborador/delete/{id}")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		businessDelegate.deleteById(id);
+		model.addAttribute("persons", businessDelegate.findAllPerson());
+		return "colaborador/index";
+	}
+
+	@Override
+	public String index(Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String save(Colaborador colaborador, BindingResult bindingResult, Model model, String action) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String show(Integer id, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String update(Integer id, String action, Colaborador colaborador, BindingResult b, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String info(Integer businessentityid, Model model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

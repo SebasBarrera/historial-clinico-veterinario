@@ -1,0 +1,27 @@
+1677456705448	Rename package 'com.control.veterinaria.businessDelegate.implementation'
+1677458055586	Rename type 'Historia_ClinicaBusinessDelegate'
+1677460609483	Delete element
+1677460731166	Copy files
+1677460732142	Copy files
+1677460732700	Copy files
+1677460733304	Copy files
+1677472083582	Delete element
+1677472165444	Rename package 'com.control.veterinaria.controller.implementations'
+1677472182252	Rename package 'com.control.veterinaria.web'
+1677472224374	Rename package 'com.control.veterinaria.controller.interfaces'
+1677472590004	Rename package 'com.control.veterinaria.web.implementations'
+1677472608353	Rename package 'com.control.veterinaria.web.interfaces'
+1677472657905	Rename type 'UsuarioController'
+1677472674292	Rename type 'MascotaController'
+1677472687420	Rename type 'Historia_ClinicaController'
+1677472698018	Rename type 'Detalle_Historia_ClinicaController'
+1677472705219	Rename type 'ColaboradorController'
+1677472723376	Rename type 'ColaboradorControllerImp'
+1677472757048	Rename type 'Detalle_Historia_ClinicaControllerImp'
+1677472764751	Rename type 'Historia_ClinicaControllerImp'
+1677472777787	Rename type 'MascotaControllerImp'
+1677472803188	Rename type 'UsuarioControllerImp'
+1677475741338	Copy file
+1677475743550	Copy file
+1677475744670	Copy file
+1677475745416	Copy file

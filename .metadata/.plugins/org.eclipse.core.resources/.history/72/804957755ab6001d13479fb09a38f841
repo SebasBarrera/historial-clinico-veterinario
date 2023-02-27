@@ -1,0 +1,12 @@
+package com.control.veterinaria.controller.implementations;
+
+import org.springframework.stereotype.Controller;
+
+import com.control.veterinaria.businessDelegate.interfaces.ColaboradorBusinessDelegate;
+import com.control.veterinaria.controller.interfaces.ColaboradorController;
+
+@Controller
+public class ColaboradorControllerImp implements ColaboradorController {
+	
+	private ColaboradorBusinessDelegate businessDelegate;
+}
