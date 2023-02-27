@@ -20,6 +20,8 @@ import com.control.veterinaria.model.Mascota;
 @Component
 public class MascotaBusinessDelegateImp implements MascotaBusinessDelegate {
 	
+	public final static String URL = "http://localhost:8080/api/mascota/";
+	
 	@Autowired
 	private RestTemplate restTemplate;
 	

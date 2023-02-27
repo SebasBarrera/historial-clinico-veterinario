@@ -18,7 +18,7 @@ import com.control.veterinaria.rest_controller.interfaces.Detalle_Historia_Clini
 import com.control.veterinaria.service.interfaces.Detalle_Historia_ClinicaService;
 
 @RestController
-@RequestMapping("/api/detalle-historia-clinica")
+@RequestMapping("/api/detalle")
 public class Detalle_Historia_ClinicaRestControllerImp implements Detalle_Historia_ClinicaRestController{
 	
 	@Autowired

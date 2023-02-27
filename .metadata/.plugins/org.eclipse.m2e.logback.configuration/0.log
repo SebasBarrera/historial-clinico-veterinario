@@ -2806,3 +2806,234 @@
 2023-02-27 00:29:04,783 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
 2023-02-27 00:29:05,841 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2023-02-27 00:29:05,841 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:29:05,850 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:36:35,977 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:36:35,977 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:36:35,979 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:41:50,011 [Worker-59: Launching historial-clinico-veterinario-backend - HistorialClinicoVeterinarioBackendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:41:50,020 [Worker-59: Launching historial-clinico-veterinario-backend - HistorialClinicoVeterinarioBackendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 00:41:50,025 [Worker-59: Launching historial-clinico-veterinario-backend - HistorialClinicoVeterinarioBackendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:42:50,240 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:42:50,245 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 00:42:50,250 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:43:53,620 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:43:53,629 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 00:43:53,634 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:44:33,791 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:44:33,801 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 00:44:33,806 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:44:37,770 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:44:37,775 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 00:44:37,780 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:47:26,022 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:47:26,022 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:47:26,024 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:47:53,969 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:47:53,969 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:47:53,972 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:48:32,765 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:48:32,765 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:48:32,768 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:49:04,622 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:49:04,622 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:49:04,624 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:54:27,678 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:54:27,678 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:54:27,680 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:56:12,843 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:56:12,843 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:56:12,845 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:56:51,873 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:56:51,873 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:56:51,875 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:57:09,933 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:57:09,933 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:57:09,935 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:58:15,174 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:58:15,174 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:58:15,176 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:58:22,305 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:58:22,306 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:58:22,307 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:58:24,984 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:58:24,984 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:58:24,986 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:58:41,006 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:58:41,006 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:58:41,008 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 00:59:30,324 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 00:59:30,325 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 00:59:30,327 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:00:48,821 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:00:48,821 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:00:48,823 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:02:08,102 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:02:08,102 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:02:08,103 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:02:23,392 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:02:23,392 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:02:23,394 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:03:16,060 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:03:16,060 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:03:16,062 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:04:03,012 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:04:03,013 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:04:03,015 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:04:11,906 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:04:11,906 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:04:11,907 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:04:16,973 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:04:16,973 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:04:16,975 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:05:29,904 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:05:29,904 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:05:29,905 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:07:31,877 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:07:31,878 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:07:31,879 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:07:47,825 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:07:47,826 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:07:47,827 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:16:24,028 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:16:24,029 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:16:24,031 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:16:33,346 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:16:33,346 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:16:33,348 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:17:23,723 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:17:23,723 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:17:23,725 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:17:35,278 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:17:35,278 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:17:35,280 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:18:59,090 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:18:59,098 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:18:59,105 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:19:39,107 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:19:39,117 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:19:39,122 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:20:10,243 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:20:10,250 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:20:10,255 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:20:55,728 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:20:55,735 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:20:55,741 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:22:44,351 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:22:44,356 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:22:44,361 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:01,663 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:01,668 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:01,673 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:06,673 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:06,677 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:06,682 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:10,531 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:10,536 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:10,541 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:17,486 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:17,491 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:17,496 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:26,088 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:26,093 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:26,098 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:34,693 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:34,708 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:34,713 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:37,767 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:37,771 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:37,776 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:38,868 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:38,873 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:38,878 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:46,458 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:46,463 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:46,468 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:47,560 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:47,565 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:47,569 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:23:52,229 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:23:52,234 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:23:52,238 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:24:14,347 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:24:14,352 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:24:14,357 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:47:42,238 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:47:42,239 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:47:42,240 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:48:20,673 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:48:20,673 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:48:20,675 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:48:27,069 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:48:27,069 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:48:27,071 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:50:20,959 [Worker-82: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.control.veterinaria:com.control.veterinaria:1.0 @ C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\pom.xml.
+2023-02-27 01:50:21,305 [Worker-82: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/attoparser/attoparser/2.0.6.RELEASE/attoparser-2.0.6.RELEASE.pom
+2023-02-27 01:50:21,360 [Worker-82: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/attoparser/attoparser/2.0.6.RELEASE/attoparser-2.0.6.RELEASE.pom
+2023-02-27 01:50:21,420 [Worker-82: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-core:jar:6.1.5.Final has been relocated to org.hibernate.orm:hibernate-core:jar:6.1.5.Final
+2023-02-27 01:50:21,722 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:50:21,722 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:50:21,724 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:50:22,797 [Worker-90: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-core:jar:6.1.5.Final has been relocated to org.hibernate.orm:hibernate-core:jar:6.1.5.Final
+2023-02-27 01:50:22,915 [Worker-90: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-thymeleaf/3.0.3/spring-boot-starter-thymeleaf-3.0.3-sources.jar
+2023-02-27 01:50:22,969 [Worker-90: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-thymeleaf/3.0.3/spring-boot-starter-thymeleaf-3.0.3-sources.jar
+2023-02-27 01:50:23,167 [Worker-90: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-thymeleaf:3.0.3
+2023-02-27 01:50:23,286 [Worker-90: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/thymeleaf/thymeleaf-spring6/3.1.1.RELEASE/thymeleaf-spring6-3.1.1.RELEASE-sources.jar
+2023-02-27 01:50:23,389 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:50:23,397 [Worker-90: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/thymeleaf/thymeleaf-spring6/3.1.1.RELEASE/thymeleaf-spring6-3.1.1.RELEASE-sources.jar
+2023-02-27 01:50:23,404 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:50:23,444 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:50:23,487 [Worker-90: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.thymeleaf:thymeleaf-spring6:3.1.1.RELEASE
+2023-02-27 01:50:23,602 [Worker-90: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/thymeleaf/thymeleaf/3.1.1.RELEASE/thymeleaf-3.1.1.RELEASE-sources.jar
+2023-02-27 01:50:23,874 [Worker-90: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/thymeleaf/thymeleaf/3.1.1.RELEASE/thymeleaf-3.1.1.RELEASE-sources.jar
+2023-02-27 01:50:23,906 [Worker-90: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.thymeleaf:thymeleaf:3.1.1.RELEASE
+2023-02-27 01:50:24,017 [Worker-90: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/attoparser/attoparser/2.0.6.RELEASE/attoparser-2.0.6.RELEASE-sources.jar
+2023-02-27 01:50:24,138 [Worker-90: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/attoparser/attoparser/2.0.6.RELEASE/attoparser-2.0.6.RELEASE-sources.jar
+2023-02-27 01:50:24,212 [Worker-90: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.attoparser:attoparser:2.0.6.RELEASE
+2023-02-27 01:50:24,604 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:50:24,604 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:50:24,604 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:50:44,397 [Worker-91: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-02-27 01:50:44,621 [Worker-91: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.control.veterinaria:com.control.veterinaria:1.0 @ C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\pom.xml.
+2023-02-27 01:50:44,716 [Worker-91: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-core:jar:6.1.5.Final has been relocated to org.hibernate.orm:hibernate-core:jar:6.1.5.Final
+2023-02-27 01:50:44,933 [Worker-91: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /historial-clinico-veterinario-backend/src/main/java
+2023-02-27 01:50:44,933 [Worker-91: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /historial-clinico-veterinario-backend/src/main/resources
+2023-02-27 01:50:44,933 [Worker-91: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /historial-clinico-veterinario-backend/src/main/resources
+2023-02-27 01:50:44,934 [Worker-91: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /historial-clinico-veterinario-backend/src/test/java
+2023-02-27 01:50:45,240 [Worker-91: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2023-02-27 01:50:45,764 [Worker-90: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact org.hibernate:hibernate-core:jar:6.1.5.Final has been relocated to org.hibernate.orm:hibernate-core:jar:6.1.5.Final
+2023-02-27 01:50:45,786 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:50:45,800 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:50:45,820 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:51:02,338 [Worker-94: Launching historial-clinico-veterinario-backend - HistorialClinicoVeterinarioBackendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:51:02,338 [Worker-94: Launching historial-clinico-veterinario-backend - HistorialClinicoVeterinarioBackendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:51:02,340 [Worker-94: Launching historial-clinico-veterinario-backend - HistorialClinicoVeterinarioBackendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:53:10,750 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:53:10,757 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:53:10,762 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:53:15,109 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:53:15,115 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:53:15,120 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:54:51,801 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:54:51,806 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 21 resources
+2023-02-27 01:54:51,811 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:56:52,400 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:56:52,400 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:56:52,402 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:57:54,944 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:57:54,944 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:57:54,946 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:59:03,537 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:59:03,537 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:59:03,540 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 01:59:12,179 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 01:59:12,179 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 01:59:12,181 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 02:00:40,644 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 02:00:40,644 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 02:00:40,646 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 02:02:08,086 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 02:02:08,086 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 02:02:08,088 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-02-27 02:03:34,406 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-27 02:03:34,406 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-27 02:03:34,408 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources

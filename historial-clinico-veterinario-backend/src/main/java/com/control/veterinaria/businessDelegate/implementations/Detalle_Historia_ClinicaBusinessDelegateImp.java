@@ -20,6 +20,8 @@ import com.control.veterinaria.model.Detalle_Historia_Clinica;
 @Component
 public class Detalle_Historia_ClinicaBusinessDelegateImp implements Detalle_Historia_ClinicaBusinessDelegate {
 	
+	public final static String URL = "http://localhost:8080/api/detalle/";
+	
 	@Autowired
 	private RestTemplate restTemplate;
 	

@@ -1,5 +1,6 @@
 package com.control.veterinaria.rest_controller.implementations;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ import com.control.veterinaria.rest_controller.interfaces.Historia_ClinicaRestCo
 import com.control.veterinaria.service.interfaces.Historia_ClinicaService;
 
 @RestController
-@RequestMapping("/api/historia-clinica")
+@RequestMapping("/api/historia")
 public class Historia_ClinicaRestControllerImp implements Historia_ClinicaRestController{
 	
 	@Autowired
@@ -43,7 +44,7 @@ public class Historia_ClinicaRestControllerImp implements Historia_ClinicaRestCo
 
 	@Override
 	@GetMapping("/")
-	public Iterable<Historia_Clinica> findAll() {
+	public List<Historia_Clinica> findAll() {
 		return service.findAll();
 	}
 

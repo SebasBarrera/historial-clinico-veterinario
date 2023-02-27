@@ -20,6 +20,8 @@ import com.control.veterinaria.model.Usuario;
 @Component
 public class UsuarioBusinessDelegateImp implements UsuarioBusinessDelegate {
 	
+	public final static String URL = "http://localhost:8080/api/usuario/";
+	
 	@Autowired
 	private RestTemplate restTemplate;
 	

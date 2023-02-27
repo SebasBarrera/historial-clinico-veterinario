@@ -5,13 +5,11 @@ import java.util.List;
 import com.control.veterinaria.model.Mascota;
 
 public interface MascotaBusinessDelegate {
-	public final static String URL = "http://localhost:8080/api/mascota/";
+	
 	public List<Mascota> findAll();
 	public Mascota findById(Integer id);
 	public Mascota save(Mascota mascota);
 	public Mascota update(Mascota mascota);
 	public void deleteById(Integer id);
-	public static String getUrl() {
-		return URL;
-	}
+	
 }

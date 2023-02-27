@@ -20,6 +20,8 @@ import com.control.veterinaria.model.Colaborador;
 @Component
 public class ColaboradorBusinessDelegateImp implements ColaboradorBusinessDelegate {
 	
+	public final static String URL = "http://localhost:8080/api/colaborador/";
+	
 	@Autowired
 	private RestTemplate restTemplate;
 	
