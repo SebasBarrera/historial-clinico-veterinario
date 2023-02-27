@@ -1,13 +1,19 @@
 package com.control.veterinaria.controller.interfaces;
 
-import java.util.Optional;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.control.veterinaria.model.Historia_Clinica;
 
 public interface Historia_ClinicaController {
-	public void save(Historia_Clinica historia);
-	public void delete(Integer id);
-	public Optional<Historia_Clinica> findById(Integer id);
-	public Iterable<Historia_Clinica> findAll();
-	public void update(Integer id, Historia_Clinica historia);
+	public String add(Model model);
+	public String delete(@PathVariable("id") Integer id, Model model);
+	public String index(Model model);
+	public String save(Historia_Clinica historia, BindingResult bindingResult, Model model, @RequestParam(value = "action", required = true) String action);
+	public String show(@PathVariable("id") Integer id, Model model);
+	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, @ModelAttribute Historia_Clinica historia, BindingResult b, Model model);
+	public String info(Integer businessentityid, Model model);
 }
