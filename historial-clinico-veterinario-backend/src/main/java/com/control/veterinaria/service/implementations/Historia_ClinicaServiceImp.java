@@ -19,8 +19,7 @@ public class Historia_ClinicaServiceImp implements com.control.veterinaria.servi
 
 	@Override
 	public List<Historia_Clinica> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
 	}
 
 	@Override
