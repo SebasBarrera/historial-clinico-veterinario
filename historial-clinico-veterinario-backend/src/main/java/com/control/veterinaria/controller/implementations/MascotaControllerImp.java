@@ -1,64 +1,92 @@
 package com.control.veterinaria.controller.implementations;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.control.veterinaria.businessDelegate.interfaces.MascotaBusinessDelegate;
 import com.control.veterinaria.controller.interfaces.MascotaController;
 import com.control.veterinaria.model.Mascota;
-import com.control.veterinaria.service.interfaces.MascotaService;
 
-@RestController
-@RequestMapping("/api/mascota")
+@Controller
 public class MascotaControllerImp implements MascotaController {
 	
 	@Autowired
-	private MascotaService service;
-
-	@Override
-	@PostMapping("/")
-	public void save(@RequestBody Mascota mascota) {
-		service.save(mascota);
-	}
-
-	@Override
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") Integer id) {
-		service.deleteById(id);
-	}
-
-	@Override
-	@GetMapping("/{id}")
-	public Optional<Mascota> findById(@PathVariable("id") Integer id) {
-		return service.findById(id);
-	}
-
-	@Override
-	@GetMapping("/")
-	public Iterable<Mascota> findAll() {
-		return service.findAll();
-	}
-	
-	
-
-	@Override
-	@PutMapping("/{id}")
-	public void update(@PathVariable("id") Integer id, @RequestBody Mascota mascota) {
-		service.save(mascota);
-	}
+	private MascotaBusinessDelegate businessDelegate;
 	
 	@Override
-	@GetMapping("/por-usuario/{id}")
-	public List<Mascota> findByUserId(@PathVariable("id") Integer id) {
-		return service.findAllById(id);
+	@GetMapping("/mascota/add")
+	public String add(Model model) {
+		model.addAttribute("mascota", new Mascota());
+		return "mascota/add";
 	}
+
+	@Override
+	@GetMapping("/mascota/delete/{id}")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		businessDelegate.deleteById(id);
+		model.addAttribute("mascotaes", businessDelegate.findAll());
+		return "mascota/index";
+	}
+
+	@Override
+	@GetMapping("/mascota/")
+	public String index(Model model) {
+		model.addAttribute("mascotaes", businessDelegate.findAll());
+		return "mascota/index";
+	}
+
+	@Override
+	@PostMapping("/mascota/add")
+	public String save(@ModelAttribute Mascota mascota, BindingResult bindingResult,
+			Model model, @RequestParam(value = "action", required = true) String action) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("mascota", mascota);
+				return "mascota/add";
+			}
+			businessDelegate.save(mascota);
+		}
+		return "redirect:/mascota/";
+	}
+
+	@Override
+	@GetMapping("/mascota/edit/{id}")
+	public String show(@PathVariable("id") Integer id, Model model) {
+		Mascota mascota = businessDelegate.findById(id);
+		if (mascota == null)
+			throw new IllegalAccessError("Invalid mascota Id: " + id);
+		model.addAttribute("mascota", mascota);
+		return "mascota/edit";
+	}
+
+	@Override
+	@PostMapping("/mascota/edit/{id}")
+	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
+			@ModelAttribute Mascota mascota, BindingResult bindingResult, Model model) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("mascota", mascota);
+				return "mascota/edit";
+			}
+			businessDelegate.update(mascota);
+			model.addAttribute("mascotaes", businessDelegate.findAll());
+		}
+		return "redirect:/mascota/";
+	}
+
+	@Override
+	@GetMapping("/mascota/info/{id}")
+	public String info(@PathVariable("id") Integer id, Model model) {
+		Mascota mascota = businessDelegate.findById(id);
+		model.addAttribute("mascota", mascota);
+		return "mascota/info";
+	}
+	
 }

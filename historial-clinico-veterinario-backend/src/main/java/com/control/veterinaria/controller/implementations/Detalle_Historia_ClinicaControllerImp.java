@@ -1,63 +1,92 @@
 package com.control.veterinaria.controller.implementations;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.control.veterinaria.businessDelegate.interfaces.Detalle_Historia_ClinicaBusinessDelegate;
 import com.control.veterinaria.controller.interfaces.Detalle_Historia_ClinicaController;
 import com.control.veterinaria.model.Detalle_Historia_Clinica;
-import com.control.veterinaria.service.interfaces.Detalle_Historia_ClinicaService;
 
-@RestController
-@RequestMapping("/api/detalle-historia-clinica")
+@Controller
 public class Detalle_Historia_ClinicaControllerImp implements Detalle_Historia_ClinicaController{
 	
 	@Autowired
-	private Detalle_Historia_ClinicaService service;
-
-	@Override
-	@PostMapping("/")
-	public void save(@RequestBody Detalle_Historia_Clinica detalle) {
-		service.save(detalle);
-	}
-
-	@Override
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") Integer id) {
-		service.deleteById(id);
-	}
-
-	@Override
-	@GetMapping("/{id}")
-	public Optional<Detalle_Historia_Clinica> findById(@PathVariable("id") Integer id) {
-		return service.findById(id);
-	}
-
-	@Override
-	@GetMapping("/")
-	public Iterable<Detalle_Historia_Clinica> findAll() {
-		return service.findAll();
-	}
-
-	@Override
-	@PutMapping("/{id}")
-	public void update(@PathVariable("id") Integer id, @RequestBody Detalle_Historia_Clinica detalle) {
-		service.save(detalle);
-	}
+	private Detalle_Historia_ClinicaBusinessDelegate businessDelegate;
 	
 	@Override
-	@GetMapping("/por-historia/{id}")
-	public List<Detalle_Historia_Clinica> findByHistoriaId(@PathVariable("id") Integer id) {
-		return service.findAllById(id);
+	@GetMapping("/detalle/add")
+	public String add(Model model) {
+		model.addAttribute("detalle", new Detalle_Historia_Clinica());
+		return "detalle/add";
+	}
+
+	@Override
+	@GetMapping("/detalle/delete/{id}")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		businessDelegate.deleteById(id);
+		model.addAttribute("detalles", businessDelegate.findAll());
+		return "detalle/index";
+	}
+
+	@Override
+	@GetMapping("/detalle/")
+	public String index(Model model) {
+		model.addAttribute("detalles", businessDelegate.findAll());
+		return "detalle/index";
+	}
+
+	@Override
+	@PostMapping("/detalle/add")
+	public String save(@ModelAttribute Detalle_Historia_Clinica detalle, BindingResult bindingResult,
+			Model model, @RequestParam(value = "action", required = true) String action) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("detalle", detalle);
+				return "detalle/add";
+			}
+			businessDelegate.save(detalle);
+		}
+		return "redirect:/detalle/";
+	}
+
+	@Override
+	@GetMapping("/detalle/edit/{id}")
+	public String show(@PathVariable("id") Integer id, Model model) {
+		Detalle_Historia_Clinica detalle = businessDelegate.findById(id);
+		if (detalle == null)
+			throw new IllegalAccessError("Invalid detalle Id: " + id);
+		model.addAttribute("detalle", detalle);
+		return "detalle/edit";
+	}
+
+	@Override
+	@PostMapping("/detalle/edit/{id}")
+	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
+			@ModelAttribute Detalle_Historia_Clinica detalle, BindingResult bindingResult, Model model) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("detalle", detalle);
+				return "detalle/edit";
+			}
+			businessDelegate.update(detalle);
+			model.addAttribute("detalles", businessDelegate.findAll());
+		}
+		return "redirect:/detalle/";
+	}
+
+	@Override
+	@GetMapping("/detalle/info/{id}")
+	public String info(@PathVariable("id") Integer id, Model model) {
+		Detalle_Historia_Clinica detalle = businessDelegate.findById(id);
+		model.addAttribute("detalle", detalle);
+		return "detalle/info";
 	}
 	
 }

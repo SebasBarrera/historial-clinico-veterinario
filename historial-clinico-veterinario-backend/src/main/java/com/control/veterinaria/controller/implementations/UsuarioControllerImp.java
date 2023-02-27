@@ -1,55 +1,92 @@
 package com.control.veterinaria.controller.implementations;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.control.veterinaria.businessDelegate.interfaces.UsuarioBusinessDelegate;
 import com.control.veterinaria.controller.interfaces.UsuarioController;
 import com.control.veterinaria.model.Usuario;
-import com.control.veterinaria.service.interfaces.UsuarioService;
 
-@RestController
-@RequestMapping("/api/usuario")
-public class UsuarioControllerImp implements UsuarioController{
+@Controller
+public class UsuarioControllerImp implements UsuarioController {
 	
 	@Autowired
-	private UsuarioService service;
-
+	private UsuarioBusinessDelegate businessDelegate;
+	
 	@Override
-	@PostMapping("/")
-	public void save(@RequestBody Usuario usuario) {
-		service.save(usuario);
+	@GetMapping("/usuario/add")
+	public String add(Model model) {
+		model.addAttribute("usuario", new Usuario());
+		return "usuario/add";
 	}
 
 	@Override
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") Integer id) {
-		service.deleteById(id);
+	@GetMapping("/usuario/delete/{id}")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		businessDelegate.deleteById(id);
+		model.addAttribute("usuarioes", businessDelegate.findAll());
+		return "usuario/index";
 	}
 
 	@Override
-	@GetMapping("/{id}")
-	public Optional<Usuario> findById(@PathVariable("id") Integer id) {
-		return service.findById(id);
+	@GetMapping("/usuario/")
+	public String index(Model model) {
+		model.addAttribute("usuarioes", businessDelegate.findAll());
+		return "usuario/index";
 	}
 
 	@Override
-	@GetMapping("/")
-	public Iterable<Usuario> findAll() {
-		return service.findAll();
+	@PostMapping("/usuario/add")
+	public String save(@ModelAttribute Usuario usuario, BindingResult bindingResult,
+			Model model, @RequestParam(value = "action", required = true) String action) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("usuario", usuario);
+				return "usuario/add";
+			}
+			businessDelegate.save(usuario);
+		}
+		return "redirect:/usuario/";
 	}
 
 	@Override
-	@PutMapping("/{id}")
-	public void update(@PathVariable("id") Integer id, @RequestBody Usuario usuario) {
-		service.save(usuario);
+	@GetMapping("/usuario/edit/{id}")
+	public String show(@PathVariable("id") Integer id, Model model) {
+		Usuario usuario = businessDelegate.findById(id);
+		if (usuario == null)
+			throw new IllegalAccessError("Invalid usuario Id: " + id);
+		model.addAttribute("usuario", usuario);
+		return "usuario/edit";
 	}
+
+	@Override
+	@PostMapping("/usuario/edit/{id}")
+	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
+			@ModelAttribute Usuario usuario, BindingResult bindingResult, Model model) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("usuario", usuario);
+				return "usuario/edit";
+			}
+			businessDelegate.update(usuario);
+			model.addAttribute("usuarioes", businessDelegate.findAll());
+		}
+		return "redirect:/usuario/";
+	}
+
+	@Override
+	@GetMapping("/usuario/info/{id}")
+	public String info(@PathVariable("id") Integer id, Model model) {
+		Usuario usuario = businessDelegate.findById(id);
+		model.addAttribute("usuario", usuario);
+		return "usuario/info";
+	}
+
 }

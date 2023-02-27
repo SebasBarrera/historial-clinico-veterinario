@@ -1,55 +1,91 @@
 package com.control.veterinaria.controller.implementations;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.control.veterinaria.businessDelegate.interfaces.Historia_ClinicaBusinessDelegate;
 import com.control.veterinaria.controller.interfaces.Historia_ClinicaController;
 import com.control.veterinaria.model.Historia_Clinica;
-import com.control.veterinaria.service.interfaces.Historia_ClinicaService;
 
-@RestController
-@RequestMapping("/api/historia-clinica")
+@Controller
 public class Historia_ClinicaControllerImp implements Historia_ClinicaController{
-	
+
 	@Autowired
-	private Historia_ClinicaService service;
-
+	private Historia_ClinicaBusinessDelegate businessDelegate;
 	@Override
-	@PostMapping("/")
-	public void save(@RequestBody Historia_Clinica historia) {
-		service.save(historia);
+	@GetMapping("/historia/add")
+	public String add(Model model) {
+		model.addAttribute("historia", new Historia_Clinica());
+		return "historia/add";
 	}
 
 	@Override
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") Integer id) {
-		service.deleteById(id);
+	@GetMapping("/historia/delete/{id}")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		businessDelegate.deleteById(id);
+		model.addAttribute("historiaes", businessDelegate.findAll());
+		return "historia/index";
 	}
 
 	@Override
-	@GetMapping("/{id}")
-	public Optional<Historia_Clinica> findById(@PathVariable("id") Integer id) {
-		return service.findById(id);
+	@GetMapping("/historia/")
+	public String index(Model model) {
+		model.addAttribute("historiaes", businessDelegate.findAll());
+		return "historia/index";
 	}
 
 	@Override
-	@GetMapping("/")
-	public Iterable<Historia_Clinica> findAll() {
-		return service.findAll();
+	@PostMapping("/historia/add")
+	public String save(@ModelAttribute Historia_Clinica historia, BindingResult bindingResult,
+			Model model, @RequestParam(value = "action", required = true) String action) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("historia", historia);
+				return "historia/add";
+			}
+			businessDelegate.save(historia);
+		}
+		return "redirect:/historia/";
 	}
 
 	@Override
-	@PutMapping("/{id}")
-	public void update(@PathVariable("id") Integer id, @RequestBody Historia_Clinica historia) {
-		service.save(historia);
+	@GetMapping("/historia/edit/{id}")
+	public String show(@PathVariable("id") Integer id, Model model) {
+		Historia_Clinica historia = businessDelegate.findById(id);
+		if (historia == null)
+			throw new IllegalAccessError("Invalid historia Id: " + id);
+		model.addAttribute("historia", historia);
+		return "historia/edit";
 	}
+
+	@Override
+	@PostMapping("/historia/edit/{id}")
+	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
+			@ModelAttribute Historia_Clinica historia, BindingResult bindingResult, Model model) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("historia", historia);
+				return "historia/edit";
+			}
+			businessDelegate.update(historia);
+			model.addAttribute("historiaes", businessDelegate.findAll());
+		}
+		return "redirect:/historia/";
+	}
+
+	@Override
+	@GetMapping("/historia/info/{id}")
+	public String info(@PathVariable("id") Integer id, Model model) {
+		Historia_Clinica historia = businessDelegate.findById(id);
+		model.addAttribute("historia", historia);
+		return "historia/info";
+	}
+	
 }

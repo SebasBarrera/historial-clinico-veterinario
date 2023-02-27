@@ -1,55 +1,92 @@
 package com.control.veterinaria.controller.implementations;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.control.veterinaria.businessDelegate.interfaces.ColaboradorBusinessDelegate;
 import com.control.veterinaria.controller.interfaces.ColaboradorController;
 import com.control.veterinaria.model.Colaborador;
-import com.control.veterinaria.service.interfaces.ColaboradorService;
 
-@RestController
-@RequestMapping("/api/colaborador")
+@Controller
 public class ColaboradorControllerImp implements ColaboradorController {
-
+	
 	@Autowired
-	private ColaboradorService service;
-	
+	private ColaboradorBusinessDelegate businessDelegate;
+
 	@Override
-	@PostMapping("/")
-	public void save(@RequestBody Colaborador colaborador) {
-		service.save(colaborador);
+	@GetMapping("/colaborador/add")
+	public String add(Model model) {
+		model.addAttribute("colaborador", new Colaborador());
+		return "colaborador/add";
 	}
 
 	@Override
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") Integer id) {
-		service.deleteById(id);
+	@GetMapping("/colaborador/delete/{id}")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		businessDelegate.deleteById(id);
+		model.addAttribute("colaboradores", businessDelegate.findAll());
+		return "colaborador/index";
 	}
 
 	@Override
-	@GetMapping("/{id}")
-	public Optional<Colaborador> findById(@PathVariable("id") Integer id) {
-		return service.findById(id);
+	@GetMapping("/colaborador/")
+	public String index(Model model) {
+		model.addAttribute("colaboradores", businessDelegate.findAll());
+		return "colaborador/index";
 	}
 
 	@Override
-	@GetMapping("/")
-	public Iterable<Colaborador> findAll() {
-		return service.findAll();
+	@PostMapping("/colaborador/add")
+	public String save(@ModelAttribute Colaborador colaborador, BindingResult bindingResult,
+			Model model, @RequestParam(value = "action", required = true) String action) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("colaborador", colaborador);
+				return "colaborador/add";
+			}
+			businessDelegate.save(colaborador);
+		}
+		return "redirect:/colaborador/";
 	}
-	
+
 	@Override
-	@PutMapping("/{id}")
-	public void update(@PathVariable("id") Integer id, @RequestBody Colaborador colaborador) {
-		service.save(colaborador);
+	@GetMapping("/colaborador/edit/{id}")
+	public String show(@PathVariable("id") Integer id, Model model) {
+		Colaborador colaborador = businessDelegate.findById(id);
+		if (colaborador == null)
+			throw new IllegalAccessError("Invalid colaborador Id: " + id);
+		model.addAttribute("colaborador", colaborador);
+		return "colaborador/edit";
 	}
+
+	@Override
+	@PostMapping("/colaborador/edit/{id}")
+	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
+			@ModelAttribute Colaborador colaborador, BindingResult bindingResult, Model model) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("colaborador", colaborador);
+				return "colaborador/edit";
+			}
+			businessDelegate.update(colaborador);
+			model.addAttribute("colaboradores", businessDelegate.findAll());
+		}
+		return "redirect:/colaborador/";
+	}
+
+	@Override
+	@GetMapping("/colaborador/info/{id}")
+	public String info(@PathVariable("id") Integer id, Model model) {
+		Colaborador colaborador = businessDelegate.findById(id);
+		model.addAttribute("colaborador", colaborador);
+		return "colaborador/info";
+	}
+
 }
