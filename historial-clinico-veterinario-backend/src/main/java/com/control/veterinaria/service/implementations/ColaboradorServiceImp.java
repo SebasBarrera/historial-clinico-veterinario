@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.control.veterinaria.dao.interfaces.ColaboradorDao;
 import com.control.veterinaria.model.Colaborador;
-import com.control.veterinaria.repository.ColaboradorRepository;
 import com.control.veterinaria.service.interfaces.ColaboradorService;
 
 @Service
@@ -16,48 +16,47 @@ import com.control.veterinaria.service.interfaces.ColaboradorService;
 public class ColaboradorServiceImp implements ColaboradorService {
 	
 	@Autowired
-	private ColaboradorRepository repo;
+	private ColaboradorDao dao;
 	
 	
-	public ColaboradorServiceImp(ColaboradorRepository repo) {
-		this.repo = repo;
+	public ColaboradorServiceImp(ColaboradorDao dao) {
+		this.dao = dao;
 	}
 
 	@Override
 	public List<Colaborador> findAll() {
-		return (List<Colaborador>) repo.findAll();
+		return dao.findAll();
 	}
 
 	@Override
 	public Optional<Colaborador> findById(int id) {
-		return repo.findById(id);
+		return Optional.of(dao.findById(id));
 	}
 	
 	@Override
 	public boolean ExistById(int id) {
-		return repo.existsById(id);
+		return dao.existsById(id);
 	}
 
 	@Override
 	public void deleteById(int id) {
-		repo.deleteById(id);
+		dao.delete(findById(id).get());
 	}
 
 	@Override
 	public void save(Colaborador colaborador) {
-		repo.save(colaborador);
+		dao.save(colaborador);
 		
 	}
 
 	@Override
 	public void delete(Colaborador colaborador) {
-		repo.delete(colaborador);
+		dao.delete(colaborador);
 	}
 
 	@Override
 	public void update(Colaborador colaborador) {
-		// TODO Auto-generated method stub
-		
+		dao.update(colaborador);
 	}
 
 }

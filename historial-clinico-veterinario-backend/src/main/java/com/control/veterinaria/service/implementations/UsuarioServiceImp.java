@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.control.veterinaria.dao.interfaces.UsuarioDao;
 import com.control.veterinaria.model.Mascota;
 import com.control.veterinaria.model.Usuario;
-import com.control.veterinaria.repository.UsuarioRepository;
 import com.control.veterinaria.service.interfaces.MascotaService;
 import com.control.veterinaria.service.interfaces.UsuarioService;
 
@@ -18,34 +18,34 @@ import com.control.veterinaria.service.interfaces.UsuarioService;
 public class UsuarioServiceImp implements UsuarioService {
 	
 	@Autowired
-	private UsuarioRepository repo;
+	private UsuarioDao dao;
 	
 	@Autowired
 	private MascotaService mascotaService;
 
 	@Override
 	public List<Usuario> findAll() {
-		return (List<Usuario>) repo.findAll();
+		return dao.findAll();
 	}
 
 	@Override
 	public Optional<Usuario> findById(int id) {
-		return  repo.findById(id);
+		return  Optional.of(dao.findById(id));
 	}
 	
 	@Override
 	public boolean ExistById(int id) {
-		return repo.existsById(id);
+		return dao.existsById(id);
 	}
 
 	@Override
 	public void deleteById(int id) {
-		repo.deleteById(id);
+		dao.delete(dao.findById(id));
 	}
 
 	@Override
 	public void delete(Usuario usuario) {
-		repo.delete(usuario);
+		dao.delete(usuario);
 		List<Mascota> mascotas = mascotaService.findAllByUserId(usuario.getId());
 		
 		if (mascotas != null) {
@@ -57,13 +57,12 @@ public class UsuarioServiceImp implements UsuarioService {
 
 	@Override
 	public void save(Usuario usuario) {
-		repo.save(usuario);
+		dao.save(usuario);
 	}
 
 	@Override
 	public void update(Usuario usuario) {
-		// TODO Auto-generated method stub
-		
+		dao.update(usuario);
 	}
 
 }
