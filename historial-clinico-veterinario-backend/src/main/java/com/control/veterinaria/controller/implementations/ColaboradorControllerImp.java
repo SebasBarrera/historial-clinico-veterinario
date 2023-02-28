@@ -45,7 +45,7 @@ public class ColaboradorControllerImp implements ColaboradorController {
 	}
 
 	@Override
-	@PostMapping("/colaborador/add/")
+	@PostMapping("/colaborador/add")
 	public String save(@ModelAttribute @Valid Colaborador colaborador, BindingResult bindingResult,
 			Model model, @RequestParam(value = "action", required = true) String action) {
 		if (!action.equals("Cancel")) {
