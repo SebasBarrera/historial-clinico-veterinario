@@ -10,6 +10,7 @@ import com.control.veterinaria.model.Mascota;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 
 @Repository
 @Scope("singleton")
@@ -55,8 +56,12 @@ public class MascotaDaoImp implements MascotaDao {
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public List<Mascota> findAllByUserId(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		String jpql = "SELECT m FROM Mascota m, User u "
+				+ "WHERE m.usuario.id=u.id "
+				+ "ODER BY m.id";
+		Query query = entityManager.createQuery(jpql);
+		return query.getResultList();
 	}
 }

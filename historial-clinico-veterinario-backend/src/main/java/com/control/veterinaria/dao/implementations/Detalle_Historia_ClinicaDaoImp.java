@@ -10,6 +10,7 @@ import com.control.veterinaria.model.Detalle_Historia_Clinica;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 
 @Repository
 @Scope("singleton")
@@ -38,7 +39,7 @@ public class Detalle_Historia_ClinicaDaoImp implements Detalle_Historia_ClinicaD
 	@Override
 	@SuppressWarnings("unchecked")
 	public List<Detalle_Historia_Clinica> findAll() {
-		String query = "\"SELECT d FROM Detalle_Historia_Clinica d ORDER BY d.id";
+		String query = "SELECT d FROM Detalle_Historia_Clinica d ORDER BY d.id";
 		return entityManager.createQuery(query).getResultList();
 	}
 
@@ -55,8 +56,12 @@ public class Detalle_Historia_ClinicaDaoImp implements Detalle_Historia_ClinicaD
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public List<Detalle_Historia_Clinica> findAllByHistoriaId(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		String jpql = "SELECT d FROM Detalle_Historia_Clinica d, Historia_Clinica h "
+				+ "WHERE d.historias_clinicas.id=h.id "
+				+ "ODER BY d.id";
+		Query query = entityManager.createQuery(jpql);
+		return query.getResultList();
 	}
 }
