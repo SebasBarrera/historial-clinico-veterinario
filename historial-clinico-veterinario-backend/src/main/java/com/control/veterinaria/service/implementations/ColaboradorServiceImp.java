@@ -39,7 +39,10 @@ public class ColaboradorServiceImp implements ColaboradorService {
 	}
 
 	@Override
-	public void deleteById(int id) {
+	public void deleteById(int id) throws Exception {
+		boolean tieneMascotas = dao.searchMascotasAtendidas(id);
+		if(tieneMascotas)
+			throw new Exception();
 		dao.delete(findById(id).get());
 	}
 

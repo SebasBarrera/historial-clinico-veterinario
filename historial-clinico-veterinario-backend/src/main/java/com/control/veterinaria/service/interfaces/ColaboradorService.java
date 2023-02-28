@@ -8,7 +8,7 @@ import com.control.veterinaria.model.Colaborador;
 public interface ColaboradorService {
 	public List<Colaborador> findAll();
 	public Optional<Colaborador> findById(int id);
-	public void deleteById(int id);
+	public void deleteById(int id) throws Exception;
 	public void delete(Colaborador colaborador);
 	public void save(Colaborador colaborador);
 	public boolean ExistById(int id);

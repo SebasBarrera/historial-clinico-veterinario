@@ -59,9 +59,10 @@ public class Detalle_Historia_ClinicaDaoImp implements Detalle_Historia_ClinicaD
 	@SuppressWarnings("unchecked")
 	public List<Detalle_Historia_Clinica> findAllByHistoriaId(Integer id) {
 		String jpql = "SELECT d FROM Detalle_Historia_Clinica d, Historia_Clinica h "
-				+ "WHERE d.historias_clinicas.id=h.id "
+				+ "WHERE d.historias_clinicas.id=:id "
 				+ "ODER BY d.id";
 		Query query = entityManager.createQuery(jpql);
+		query.setParameter("id", id);
 		return query.getResultList();
 	}
 }

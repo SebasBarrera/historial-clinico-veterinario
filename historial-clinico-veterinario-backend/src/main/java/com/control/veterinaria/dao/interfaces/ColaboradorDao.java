@@ -11,4 +11,5 @@ public interface ColaboradorDao {
 	public List<Colaborador> findAll();
 	public Colaborador findById(Integer id);
 	public boolean existsById(Integer id);
+	public boolean searchMascotasAtendidas(int id);
 }

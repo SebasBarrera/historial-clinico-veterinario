@@ -31,7 +31,7 @@ public class ColaboradorRestControllerImp implements ColaboradorRestController {
 
 	@Override
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") Integer id) {
+	public void delete(@PathVariable("id") Integer id) throws Exception {
 		service.deleteById(id);
 	}
 

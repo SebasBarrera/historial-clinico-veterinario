@@ -32,9 +32,15 @@ public class ColaboradorControllerImp implements ColaboradorController {
 	@Override
 	@GetMapping("/colaborador/delete/{id}")
 	public String delete(@PathVariable("id") Integer id, Model model) {
-		businessDelegate.deleteById(id);
-		model.addAttribute("colaboradores", businessDelegate.findAll());
-		return "colaborador/index";
+		try {
+			businessDelegate.deleteById(id);
+			model.addAttribute("colaboradores", businessDelegate.findAll());
+			return "colaborador/index";
+		} catch (Exception e) {
+			return "colaborador/masc";
+		} 
+		
+		
 	}
 
 	@Override
@@ -50,13 +56,15 @@ public class ColaboradorControllerImp implements ColaboradorController {
 			Model model, @RequestParam(value = "action", required = true) String action) {
 		if (!action.equals("Cancel")) {
 			if (bindingResult.hasErrors()) {
-				if(colaborador == null) {
-					System.out.println("");
-				}
 				model.addAttribute("colaborador", colaborador);
 				return "colaborador/add";
 			}
-			businessDelegate.save(colaborador);
+			try {
+				businessDelegate.save(colaborador);
+			} catch (Exception e) {
+				return "colaborador/except";
+			}
+			
 		}
 		return "redirect:/colaborador/";
 	}

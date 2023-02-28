@@ -6,7 +6,7 @@ import com.control.veterinaria.model.Colaborador;
 
 public interface ColaboradorRestController {
 	public void save(Colaborador colaborador);
-	public void delete(Integer id);
+	public void delete(Integer id) throws Exception;
 	public Optional<Colaborador> findById(Integer id);
 	public Iterable<Colaborador> findAll();
 	public void update(Integer id, Colaborador colaborador);

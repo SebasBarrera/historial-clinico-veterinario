@@ -21,6 +21,12 @@
 			<div class="col-md-6">
 				<form action="#" th:action="@{/colaborador/info/{id}(id=*{id})}" th:object="${colaborador}" method="get">
 					<div class="row">
+					
+						<div class="form-group col-md-6">
+							<label for="id" class="col-form-label">ID</label> 
+							<input disabled="disabled" type="text" th:field="*{id}" class="form-control" id="id" placeholder="id">
+							<div th:if="${#fields.hasErrors('id')}" th:errors="*{id}" class="alert alert-warning"></div>
+						</div>
 
 						<div class="form-group col-md-6">
 							<label for="nombre" class="col-form-label">Nombre</label> 

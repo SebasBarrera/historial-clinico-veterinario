@@ -10,6 +10,7 @@ import com.control.veterinaria.model.Colaborador;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 
 @Repository
 @Scope("singleton")
@@ -52,6 +53,20 @@ public class ColaboradorDaoImp implements ColaboradorDao {
 		if (entityManager.find(Colaborador.class, id) != null)
 			return true;
 		return false;
+	}
+
+	@Override
+	public boolean searchMascotasAtendidas(int id) {
+		boolean tiene = false;
+		String jpql = "SELECT c FROM Colaborador c, Mascota m, Detalle_Historia_Clinica d, Historia_Clinica h "
+				+ "WHERE d.colaborador.id=:id";
+		Query query = entityManager.createQuery(jpql);
+		query.setParameter("id", id);
+		if (query.getResultList() != null) {
+			if (!query.getResultList().isEmpty()) 
+				tiene = true;
+		}	
+		return tiene;
 	}
 	
 	

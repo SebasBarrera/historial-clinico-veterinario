@@ -59,9 +59,10 @@ public class MascotaDaoImp implements MascotaDao {
 	@SuppressWarnings("unchecked")
 	public List<Mascota> findAllByUserId(Integer id) {
 		String jpql = "SELECT m FROM Mascota m, User u "
-				+ "WHERE m.usuario.id=u.id "
+				+ "WHERE m.usuario.id=:id "
 				+ "ODER BY m.id";
 		Query query = entityManager.createQuery(jpql);
+		query.setParameter("id", id);
 		return query.getResultList();
 	}
 }
