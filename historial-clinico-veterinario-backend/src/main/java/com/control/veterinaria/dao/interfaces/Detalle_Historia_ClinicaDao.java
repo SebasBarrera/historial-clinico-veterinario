@@ -11,4 +11,5 @@ public interface Detalle_Historia_ClinicaDao {
 	public List<Detalle_Historia_Clinica> findAll();
 	public Detalle_Historia_Clinica findById(Integer id);
 	public boolean existsById(Integer id);
+	public List<Detalle_Historia_Clinica> findAllByHistoriaId(Integer id);
 }

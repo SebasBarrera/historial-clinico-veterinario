@@ -11,4 +11,5 @@ public interface MascotaDao {
 	public List<Mascota> findAll();
 	public Mascota findById(Integer id);
 	public boolean existsById(Integer id);
+	public List<Mascota> findAllByUserId(Integer id);
 }
