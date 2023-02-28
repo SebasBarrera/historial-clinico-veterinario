@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.control.veterinaria.model.Historia_Clinica;
 import com.control.veterinaria.model.Mascota;
 import com.control.veterinaria.repository.MascotaRepository;
+import com.control.veterinaria.service.interfaces.Historia_ClinicaService;
 import com.control.veterinaria.service.interfaces.MascotaService;
 
 @Service
@@ -18,6 +20,9 @@ public class MascotaServiceImp implements MascotaService {
 	
 	@Autowired
 	private MascotaRepository repo;
+	
+	@Autowired
+	private Historia_ClinicaService historiaService;
 
 	@Override
 	public List<Mascota> findAll() {
@@ -26,7 +31,7 @@ public class MascotaServiceImp implements MascotaService {
 	
 	// TODO cambiar por DAOS para mejor optimización
 	@Override
-	public List<Mascota> findAllById(int id) {
+	public List<Mascota> findAllByUserId(int id) {
 		List<Mascota> mascotas = new ArrayList<>();
 		List<Mascota> todas = repo.findAll();
 		for (int i = 0; i < todas.size(); i++) {
@@ -54,11 +59,20 @@ public class MascotaServiceImp implements MascotaService {
 	@Override
 	public void delete(Mascota mascota) {
 		repo.delete(mascota);
+		historiaService.deleteById(mascota.getId());
 	}
 
 	@Override
 	public void save(Mascota mascota) {
+		Historia_Clinica historia = new Historia_Clinica();
+		historiaService.save(historia);
 		repo.save(mascota);
+	}
+
+	@Override
+	public void update(Mascota mascota) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

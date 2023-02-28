@@ -12,7 +12,7 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
-
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,10 +29,13 @@ public class Mascota {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MASCOTA_ID_GENERATOR")
 	private int id;
 	@Column(nullable = false)
+	@NotEmpty(message = "El nombre no puede estar vacio")
 	private String nombre;
 	@Column(nullable = false)
+	@NotEmpty(message = "La raza no puede estar vacia")
 	private String raza;
 	@Column(nullable = false)
+	@NotEmpty(message = "El sexo no puede estar vacio")
 	private String sexo;
 	@ManyToOne
 	@JoinColumn(name = "usuario_id")

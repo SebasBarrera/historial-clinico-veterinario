@@ -47,4 +47,10 @@ public class Historia_ClinicaServiceImp implements com.control.veterinaria.servi
 		repo.save(historia);
 	}
 
+	@Override
+	public void update(Historia_Clinica historia) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

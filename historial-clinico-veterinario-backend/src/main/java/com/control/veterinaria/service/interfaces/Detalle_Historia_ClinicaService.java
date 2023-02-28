@@ -7,7 +7,7 @@ import com.control.veterinaria.model.Detalle_Historia_Clinica;
 
 public interface Detalle_Historia_ClinicaService {
 	public List<Detalle_Historia_Clinica> findAll();
-	public List<Detalle_Historia_Clinica> findAllById(int id);
+	public List<Detalle_Historia_Clinica> findAllByHistoriaId(int id);
 	public Optional<Detalle_Historia_Clinica> findById(int id);
 	public void deleteById(int id);
 	public void delete(Detalle_Historia_Clinica detalle);

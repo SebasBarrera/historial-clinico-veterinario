@@ -57,7 +57,7 @@ public class Detalle_Historia_ClinicaRestControllerImp implements Detalle_Histor
 	@Override
 	@GetMapping("/por-historia/{id}")
 	public List<Detalle_Historia_Clinica> findByHistoriaId(@PathVariable("id") Integer id) {
-		return service.findAllById(id);
+		return service.findAllByHistoriaId(id);
 	}
 	
 }

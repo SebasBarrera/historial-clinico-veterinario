@@ -7,7 +7,7 @@ import com.control.veterinaria.model.Mascota;
 
 public interface MascotaService {
 	public List<Mascota> findAll();
-	public List<Mascota> findAllById(int id);
+	public List<Mascota> findAllByUserId(int id);
 	public Optional<Mascota> findById(int id);
 	public void deleteById(int id);
 	public void delete(Mascota mascota);

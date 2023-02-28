@@ -14,6 +14,8 @@ import com.control.veterinaria.businessDelegate.interfaces.Detalle_Historia_Clin
 import com.control.veterinaria.controller.interfaces.Detalle_Historia_ClinicaController;
 import com.control.veterinaria.model.Detalle_Historia_Clinica;
 
+import jakarta.validation.Valid;
+
 @Controller
 public class Detalle_Historia_ClinicaControllerImp implements Detalle_Historia_ClinicaController{
 	
@@ -44,7 +46,7 @@ public class Detalle_Historia_ClinicaControllerImp implements Detalle_Historia_C
 
 	@Override
 	@PostMapping("/detalle/add")
-	public String save(@ModelAttribute Detalle_Historia_Clinica detalle, BindingResult bindingResult,
+	public String save(@ModelAttribute @Valid Detalle_Historia_Clinica detalle, BindingResult bindingResult,
 			Model model, @RequestParam(value = "action", required = true) String action) {
 		if (!action.equals("Cancel")) {
 			if (bindingResult.hasErrors()) {
@@ -69,7 +71,7 @@ public class Detalle_Historia_ClinicaControllerImp implements Detalle_Historia_C
 	@Override
 	@PostMapping("/detalle/edit/{id}")
 	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
-			@ModelAttribute Detalle_Historia_Clinica detalle, BindingResult bindingResult, Model model) {
+			@ModelAttribute @Valid Detalle_Historia_Clinica detalle, BindingResult bindingResult, Model model) {
 		if (!action.equals("Cancel")) {
 			if (bindingResult.hasErrors()) {
 				model.addAttribute("detalle", detalle);

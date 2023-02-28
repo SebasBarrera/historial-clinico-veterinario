@@ -59,6 +59,6 @@ public class MascotaRestControllerImp implements MascotaRestController {
 	@Override
 	@GetMapping("/por-usuario/{id}")
 	public List<Mascota> findByUserId(@PathVariable("id") Integer id) {
-		return service.findAllById(id);
+		return service.findAllByUserId(id);
 	}
 }

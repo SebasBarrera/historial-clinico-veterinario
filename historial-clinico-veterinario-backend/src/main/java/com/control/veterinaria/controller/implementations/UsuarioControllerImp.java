@@ -14,6 +14,8 @@ import com.control.veterinaria.businessDelegate.interfaces.UsuarioBusinessDelega
 import com.control.veterinaria.controller.interfaces.UsuarioController;
 import com.control.veterinaria.model.Usuario;
 
+import jakarta.validation.Valid;
+
 @Controller
 public class UsuarioControllerImp implements UsuarioController {
 	
@@ -44,7 +46,7 @@ public class UsuarioControllerImp implements UsuarioController {
 
 	@Override
 	@PostMapping("/usuario/add")
-	public String save(@ModelAttribute Usuario usuario, BindingResult bindingResult,
+	public String save(@ModelAttribute @Valid Usuario usuario, BindingResult bindingResult,
 			Model model, @RequestParam(value = "action", required = true) String action) {
 		if (!action.equals("Cancel")) {
 			if (bindingResult.hasErrors()) {
@@ -69,7 +71,7 @@ public class UsuarioControllerImp implements UsuarioController {
 	@Override
 	@PostMapping("/usuario/edit/{id}")
 	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
-			@ModelAttribute Usuario usuario, BindingResult bindingResult, Model model) {
+			@ModelAttribute @Valid Usuario usuario, BindingResult bindingResult, Model model) {
 		if (!action.equals("Cancel")) {
 			if (bindingResult.hasErrors()) {
 				model.addAttribute("usuario", usuario);

@@ -1,7 +1,9 @@
 package com.control.veterinaria.model;
 
+import java.time.LocalTime;
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,6 +14,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -30,6 +33,9 @@ public class Historia_Clinica {
 	@SequenceGenerator(name = "HISTORIA_CLINICA_ID_GENERATOR", allocationSize = 1, sequenceName = "HISTORIA_CLINICA_SEQ")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "HISTORIA_CLINICA_ID_GENERATOR")
 	private int id;
+	@Column(nullable = false)
+	@NotNull(message = "La Fecha de creacion no puede estar vacia")
+	private LocalTime fecha_creacion;
 	@OneToOne
 	@JoinColumn(name="mascota_id")
 	private Mascota mascota;

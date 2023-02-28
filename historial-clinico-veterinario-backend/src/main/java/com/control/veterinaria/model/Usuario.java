@@ -11,6 +11,8 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -30,16 +32,22 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USUARIO_ID_GENERATOR")
 	private int id;
 	@Column(nullable = false)
+	@NotEmpty(message = "El nombre no puede estar vacio")
 	private String nombre;
 	@Column(nullable = false)
+	@NotEmpty(message = "El apellido no puede estar vacio")
 	private String apellido;
 	@Column(nullable = false)
+	@NotEmpty(message = "El tipo de documento no puede estar vacio")
 	private String tipo_documento;
 	@Column(nullable = false, unique = true)
+	@NotNull(message = "El numero de identificacion no puede estar vacio")
 	private int documento_identificacion;
 	@Column(nullable = false)
+	@NotEmpty(message = "El estado no puede estar vacio")
 	private String estado;
 	@Column(nullable = false)
+	@NotNull(message = "El sexo no puede estar vacio")
 	private int sexo;
 	@OneToMany(mappedBy = "id")
 	@JsonIgnore

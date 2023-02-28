@@ -8,7 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
-
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,16 +26,21 @@ public class Colaborador {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "COLABORADOR_ID_GENERATOR")
 	private int id;
 	@Column(nullable = false)
+	@NotEmpty(message = "El nombre no puede estar vacio")
 	private String nombre;
 	@Column(nullable = false)
+	@NotEmpty(message = "El apellido no puede estar vacio")
 	private String apellido;
-	@Column(nullable = false)
+	@Column(nullable = false, length = 255)
+	@NotEmpty(message = "El cargo no puede estar vacio")
 	private String cargo;
 	@Column(nullable = true)
 	private String especialidad;
-	@Column(nullable = false)
+	@Column(nullable = false, length = 3)
+	@NotEmpty(message = "El tipo de documento no puede estar vacio")
 	private String tipo_documento;
 	@Column(nullable = false, unique = true)
+	@NotNull(message = "El numero de identificación no puede estar vacio")
 	private int documento_identificacion;
 	
 }

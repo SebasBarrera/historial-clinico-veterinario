@@ -54,4 +54,10 @@ public class ColaboradorServiceImp implements ColaboradorService {
 		repo.delete(colaborador);
 	}
 
+	@Override
+	public void update(Colaborador colaborador) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

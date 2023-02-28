@@ -14,7 +14,9 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
-
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,20 +33,28 @@ public class Detalle_Historia_Clinica {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DETALLE_HISTORIA_CLINICA_ID_GENERATOR")
 	private int id;
 	@Column(nullable = false)
+	@NotEmpty(message = "La Temperatura no puede estar vacia")
 	private String temperatura;
 	@Column(nullable = false)
+	@Positive(message = "El peso debe ser mayor a 0")
 	private double peso;
 	@Column(nullable = false)
+	@Positive
 	private double frecuencia_cardiaca;
 	@Column(nullable = false)
+	@Positive
 	private double frecuencia_respiratoria;
 	@Column(nullable = false)
+	@NotNull(message = "La fecha no puede estar vacia")
 	private LocalTime fecha_hora;
 	@Column(nullable = false)
+	@NotEmpty(message = "La Alimentación no puede estar vacia")
 	private String alimentacion;
 	@Column(nullable = false)
+	@NotEmpty(message = "El Habitad no puede estar vacio")
 	private String habitad;
 	@Column(nullable = false)
+	@NotEmpty(message = "La Observación no puede estar vacia")
 	private String observacion;
 	@ManyToOne
 	@JoinColumn(name="historia_clinica_id")

@@ -25,10 +25,11 @@ public class Detalle_Historia_ClinicaServiceImp implements Detalle_Historia_Clin
 	}
 
 	@Override
-	public List<Detalle_Historia_Clinica> findAllById(int id) {
+	public List<Detalle_Historia_Clinica> findAllByHistoriaId(int id) {
 		List<Detalle_Historia_Clinica> detalles = new ArrayList<Detalle_Historia_Clinica>();
 		List<Detalle_Historia_Clinica> todosDetalles = repo.findAll();
 		for (int i = 0; i < todosDetalles.size(); i++) {
+			
 			if (todosDetalles.get(i).getHistorias_clinicas().getId() == id )
 				detalles.add(todosDetalles.get(i));
 		}
@@ -58,6 +59,12 @@ public class Detalle_Historia_ClinicaServiceImp implements Detalle_Historia_Clin
 	@Override
 	public void save(Detalle_Historia_Clinica detalle) {
 		repo.save(detalle);
+	}
+
+	@Override
+	public void update(Detalle_Historia_Clinica detalle) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

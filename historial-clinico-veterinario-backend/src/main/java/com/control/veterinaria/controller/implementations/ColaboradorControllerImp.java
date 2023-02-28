@@ -14,6 +14,8 @@ import com.control.veterinaria.businessDelegate.interfaces.ColaboradorBusinessDe
 import com.control.veterinaria.controller.interfaces.ColaboradorController;
 import com.control.veterinaria.model.Colaborador;
 
+import jakarta.validation.Valid;
+
 @Controller
 public class ColaboradorControllerImp implements ColaboradorController {
 	
@@ -43,11 +45,14 @@ public class ColaboradorControllerImp implements ColaboradorController {
 	}
 
 	@Override
-	@PostMapping("/colaborador/add")
-	public String save(@ModelAttribute Colaborador colaborador, BindingResult bindingResult,
+	@PostMapping("/colaborador/add/")
+	public String save(@ModelAttribute @Valid Colaborador colaborador, BindingResult bindingResult,
 			Model model, @RequestParam(value = "action", required = true) String action) {
 		if (!action.equals("Cancel")) {
 			if (bindingResult.hasErrors()) {
+				if(colaborador == null) {
+					System.out.println("");
+				}
 				model.addAttribute("colaborador", colaborador);
 				return "colaborador/add";
 			}
@@ -69,7 +74,7 @@ public class ColaboradorControllerImp implements ColaboradorController {
 	@Override
 	@PostMapping("/colaborador/edit/{id}")
 	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
-			@ModelAttribute Colaborador colaborador, BindingResult bindingResult, Model model) {
+			@ModelAttribute @Valid Colaborador colaborador, BindingResult bindingResult, Model model) {
 		if (!action.equals("Cancel")) {
 			if (bindingResult.hasErrors()) {
 				model.addAttribute("colaborador", colaborador);
