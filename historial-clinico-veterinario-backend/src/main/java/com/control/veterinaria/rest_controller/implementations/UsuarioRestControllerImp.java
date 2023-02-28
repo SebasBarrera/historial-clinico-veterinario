@@ -50,6 +50,6 @@ public class UsuarioRestControllerImp implements UsuarioRestController{
 	@Override
 	@PutMapping("/{id}")
 	public void update(@PathVariable("id") Integer id, @RequestBody Usuario usuario) {
-		service.save(usuario);
+		service.update(usuario);
 	}
 }

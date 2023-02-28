@@ -12,4 +12,5 @@ public interface UsuarioService {
 	public void delete(Usuario usuario);
 	public void save(Usuario usuario);
 	boolean ExistById(int id);
+	public void update(Usuario usuario);
 }

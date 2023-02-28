@@ -12,4 +12,5 @@ public interface ColaboradorService {
 	public void delete(Colaborador colaborador);
 	public void save(Colaborador colaborador);
 	public boolean ExistById(int id);
+	public void update(Colaborador colaborador);
 }

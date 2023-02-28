@@ -53,7 +53,7 @@ public class MascotaRestControllerImp implements MascotaRestController {
 	@Override
 	@PutMapping("/{id}")
 	public void update(@PathVariable("id") Integer id, @RequestBody Mascota mascota) {
-		service.save(mascota);
+		service.update(mascota);
 	}
 	
 	@Override

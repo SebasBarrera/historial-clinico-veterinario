@@ -51,6 +51,6 @@ public class Historia_ClinicaRestControllerImp implements Historia_ClinicaRestCo
 	@Override
 	@PutMapping("/{id}")
 	public void update(@PathVariable("id") Integer id, @RequestBody Historia_Clinica historia) {
-		service.save(historia);
+		service.update(historia);
 	}
 }

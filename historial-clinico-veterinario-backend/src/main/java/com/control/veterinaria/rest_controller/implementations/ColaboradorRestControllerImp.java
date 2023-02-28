@@ -50,6 +50,6 @@ public class ColaboradorRestControllerImp implements ColaboradorRestController {
 	@Override
 	@PutMapping("/{id}")
 	public void update(@PathVariable("id") Integer id, @RequestBody Colaborador colaborador) {
-		service.save(colaborador);
+		service.update(colaborador);
 	}
 }

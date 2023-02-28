@@ -13,4 +13,5 @@ public interface MascotaService {
 	public void delete(Mascota mascota);
 	public void save(Mascota mascota);
 	boolean ExistById(int id);
+	public void update(Mascota mascota);
 }

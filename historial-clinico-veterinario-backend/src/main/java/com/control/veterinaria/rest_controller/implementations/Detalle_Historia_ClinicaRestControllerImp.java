@@ -51,7 +51,7 @@ public class Detalle_Historia_ClinicaRestControllerImp implements Detalle_Histor
 	@Override
 	@PutMapping("/{id}")
 	public void update(@PathVariable("id") Integer id, @RequestBody Detalle_Historia_Clinica detalle) {
-		service.save(detalle);
+		service.update(detalle);
 	}
 	
 	@Override
