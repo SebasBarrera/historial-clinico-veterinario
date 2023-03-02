@@ -7,7 +7,7 @@ import { ColaboradorService } from 'src/app/services/colaborador/colaborador.ser
 @Component({
   selector: 'app-colaborador',
   templateUrl: './colaborador.component.html',
-  styleUrls: ['./colaborador.component.css']
+  styleUrls: ['./colaborador.component.css'],
 })
 export class ColaboradorComponent implements OnInit {
   colaboradorForm: FormGroup;
@@ -18,13 +18,16 @@ export class ColaboradorComponent implements OnInit {
     public fb: FormBuilder,
     public colaboradorService: ColaboradorService,
     public _router: Router,
-    public _location: Location) { }
+    public _location: Location
+  ) {}
 
   refresh(): void {
-    this._router.navigateByUrl("/refresh", { skipLocationChange: true }).then(() => {
-      console.log(decodeURI(this._location.path()));
-      this._router.navigate([decodeURI(this._location.path())]);
-    });
+    this._router
+      .navigateByUrl('/refresh', { skipLocationChange: true })
+      .then(() => {
+        console.log(decodeURI(this._location.path()));
+        this._router.navigate([decodeURI(this._location.path())]);
+      });
   }
 
   ngOnInit(): void {
@@ -38,31 +41,42 @@ export class ColaboradorComponent implements OnInit {
       documento_identificacion: ['', Validators.required],
     });
 
-    this.colaboradorService.getAll().subscribe(resp => {
-      this.colaboradores = resp;
-    },
-      error => { console.error(error) }
+    this.colaboradorService.getAll().subscribe(
+      (resp) => {
+        this.colaboradores = resp;
+      },
+      (error) => {
+        console.error(error);
+      }
     );
   }
 
-  guardar(): void {
-    this.colaboradorService.save(this.colaboradorForm.value).subscribe(resp => {
-      this.refresh();
-    },
-    )
+  save(): void {
+    this.colaboradorService
+      .save(this.colaboradorForm.value)
+      .subscribe((resp) => {
+        this.refresh();
+      });
   }
 
-  eliminar(colaborador: any) {
-    this.colaboradorService.delete(colaborador.id).subscribe(resp => {
+  delete(colaborador: any) {
+    this.colaboradorService.delete(colaborador.id).subscribe((resp) => {
       if (resp === true) {
         this.colaboradores.pop(colaborador);
       }
       this.refresh();
-    },
-    )
+    });
   }
 
-  editar(colaborador: { id: any; nombre: any; apellido: any; cargo: any; especialidad: any; tipo_documento: any; documento_identificacion: any; }) {
+  update(colaborador: {
+    id: any;
+    nombre: any;
+    apellido: any;
+    cargo: any;
+    especialidad: any;
+    tipo_documento: any;
+    documento_identificacion: any;
+  }) {
     this.colaboradorForm.setValue({
       id: colaborador.id,
       nombre: colaborador.nombre,
@@ -71,6 +85,6 @@ export class ColaboradorComponent implements OnInit {
       especialidad: colaborador.especialidad,
       tipo_documento: colaborador.tipo_documento,
       documento_identificacion: colaborador.documento_identificacion,
-    })
+    });
   }
 }

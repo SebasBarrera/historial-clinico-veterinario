@@ -1,1 +1,120 @@
-<p>colaborador works!</p>
+<h2 class="container my-5">Agregar Colaborador</h2>
+
+<div class="container my-5">
+  <form (ngSubmit)="save()" [formGroup]="colaboradorForm">
+    <div class="form-group col-md-6">
+      <label>Nombre</label>
+      <input
+        title="nombre"
+        placeholder="Pepe"
+        type="text"
+        formControlName="nombre"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Apellido</label>
+      <input
+        placeholder="Perez"
+        type="text"
+        formControlName="apellido"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Cargo</label>
+      <input
+        placeholder="Veterinario"
+        type="text"
+        formControlName="cargo"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Especialidad</label>
+      <input
+        placeholder="Cardiologo"
+        type="text"
+        formControlName="especialidad"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="tipo_documento" class="col-form-label"
+        >Tipo de documento</label
+      >
+      <select
+        class="form-control-range"
+        th:field="*{tipo_documento}"
+        id="tipo_documento"
+      >
+        <option value="cc">Cedula de Ciudadania</option>
+        <option value="ti">Tarjeta de Identidad</option>
+        <option value="con">Contraseña</option>
+        <option value="pa">Pasaporte</option>
+        <option value="ce">Cedula de Extrangeria</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Número de Documento</label>
+      <input
+        placeholder="0000000"
+        type="number"
+        format
+        formControlName="documento_identificacion"
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</div>
+
+<div class="estilo">
+  <p class="barra"></p>
+  <h3 class="title">Lista de Colaboradores</h3>
+</div>
+
+<div class="estilo">
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Cargo</th>
+        <th>Especialidad</th>
+        <th>Tipo de documento</th>
+        <th>Número de documento Documento</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of colaboradores">
+        <th>{{ item.id }}</th>
+        <th>{{ item.nombre }}</th>
+        <th>{{ item.apellido }}</th>
+        <th>{{ item.cargo }}</th>
+        <th>{{ item.especialidad }}</th>
+        <th>{{ item.tipo_documento }}</th>
+        <th>{{ item.documento_identificacion }}</th>
+        <td>
+          <button type="button" class="btn btn-info" (click)="update(item)">
+            Editar
+          </button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="delete(item)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
