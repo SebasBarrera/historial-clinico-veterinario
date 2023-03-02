@@ -8,12 +8,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentsModule } from './components/components.module';
-import { PagesModule } from './pages/pages.module';
 
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,7 +21,6 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     HttpClientModule,
     ComponentsModule,
-    PagesModule,
     RouterModule
   ],
   providers: [],

@@ -12,9 +12,15 @@ export class DetalleHistoriaClinicaService {
     return this.http.get(this.URL);
   }
   public save(detalle: any): Observable<any> {
-    return this.http.get(this.URL, detalle);
+    return this.http.post(this.URL, detalle);
   }
   public delete(id: string): Observable<any> {
+    return this.http.delete(this.URL + id);
+  }
+  public update(id: string, detalle: any): Observable<any> {
+    return this.http.put(this.URL + id, detalle);
+  }
+  public get(id: string): Observable<any> {
     return this.http.get(this.URL + id);
   }
 }

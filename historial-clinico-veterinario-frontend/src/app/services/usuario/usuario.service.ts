@@ -12,9 +12,15 @@ export class UsuarioService {
     return this.http.get(this.URL);
   }
   public save(usuario: any): Observable<any> {
-    return this.http.get(this.URL, usuario);
+    return this.http.post(this.URL, usuario);
   }
   public delete(id: string): Observable<any> {
+    return this.http.delete(this.URL + id);
+  }
+  public update(id: string, usuario: any): Observable<any> {
+    return this.http.put(this.URL + id, usuario);
+  }
+  public get(id: string): Observable<any> {
     return this.http.get(this.URL + id);
   }
 }

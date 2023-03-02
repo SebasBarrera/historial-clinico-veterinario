@@ -12,9 +12,15 @@ export class MascotaService {
     return this.http.get(this.URL);
   }
   public save(mascota: any): Observable<any> {
-    return this.http.get(this.URL, mascota);
+    return this.http.post(this.URL, mascota);
   }
   public delete(id: string): Observable<any> {
+    return this.http.delete(this.URL + id);
+  }
+  public update(id: string, mascota: any): Observable<any> {
+    return this.http.put(this.URL + id, mascota);
+  }
+  public get(id: string): Observable<any> {
     return this.http.get(this.URL + id);
   }
 }

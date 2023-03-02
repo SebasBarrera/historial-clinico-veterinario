@@ -14,9 +14,15 @@ export class ColaboradorService {
     return this.http.get(this.URL);
   }
   public save(colaborador: any): Observable<any> {
-    return this.http.get(this.URL, colaborador);
+    return this.http.post(this.URL, colaborador);
   }
   public delete(id: string): Observable<any> {
+    return this.http.delete(this.URL + id);
+  }
+  public update(id: string, colaborador: any): Observable<any> {
+    return this.http.put(this.URL + id, colaborador);
+  }
+  public get(id: string): Observable<any> {
     return this.http.get(this.URL + id);
   }
 }
