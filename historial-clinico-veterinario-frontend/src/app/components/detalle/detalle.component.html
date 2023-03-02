@@ -1,1 +1,137 @@
-<p>detalle works!</p>
+<h2 class="title">Agregar Detalle de Historias Clínica</h2>
+
+<div class="container my-5">
+  <form (ngSubmit)="save()" [formGroup]="detalleForm">
+    <div class="form-group col-md-6">
+      <label>Mascota</label>
+      <select
+        title="historia_clinica"
+        name="historia_clinica"
+        id="historia_clinica"
+        formControlName="historia_clinica"
+        class="form-control"
+      >
+        <option [ngValue]="item" *ngFor="let item of historias">
+          {{ item.mascota.nombre }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Temperatura</label>
+      <input
+        placeholder="37"
+        type="text"
+        formControlName="temperatura"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Peso</label>
+      <input
+        placeholder="8"
+        type="number"
+        formControlName="peso"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Frecuencia Cardiaca</label>
+      <input
+        placeholder="60"
+        type="text"
+        formControlName="frecuencia_cardiaca"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Frecuencia Respiratoria</label>
+      <input
+        placeholder="20"
+        type="number"
+        formControlName="frecuencia_respiratoria"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Fecha y hora</label>
+      <input
+        title="fecha_hora"
+        type="datetime-local"
+        formControlName="fecha_hora"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Alimentacion</label>
+      <input placeholder="concentrado" type="text" formControlName="alimentacion" class="form-control" />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Habitad</label>
+      <input placeholder="domestico" type="text" formControlName="habitad" class="form-control" />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Observacion</label>
+      <input placeholder="Como esta?" type="text" formControlName="observacion" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</div>
+
+<div class="estilo">
+  <p class="barra"></p>
+  <h3 class="title">Detalles de historias Clínicas</h3>
+</div>
+
+<div class="estilo">
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Id</th>
+        <th>Mascota</th>
+        <th>Temperatura</th>
+        <th>Peso</th>
+        <th>Frecuencia Cardiaca</th>
+        <th>Frecuencia Respiratoria</th>
+        <th>Fecha y Hora</th>
+        <th>Alimentacion</th>
+        <th>Habitad</th>
+        <th>Observacion</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of detalles">
+        <th>{{ item.id }}</th>
+        <th>{{ item.historia_clinica.mascota.nombre }}</th>
+        <th>{{ item.temperatura }}</th>
+        <th>{{ item.peso }}</th>
+        <th>{{ item.frecuencia_cardiaca }}</th>
+        <th>{{ item.frecuencia_respiratoria }}</th>
+        <th>{{ item.fecha_hora }}</th>
+        <th>{{ item.alimentacion }}</th>
+        <th>{{ item.habitad }}</th>
+        <th>{{ item.observacion }}</th>
+        <td>
+          <button type="button" class="btn btn-info" (click)="update(item)">
+            Editar
+          </button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="delete(item)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

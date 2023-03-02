@@ -1,1 +1,51 @@
-<p>historia works!</p>
+<h2 class="title">Agregar Historia Clínica</h2>
+
+<div class="container my-5">
+  <form (ngSubmit)="save()" [formGroup]="historiaForm">
+    <div class="form-group col-md-6">
+      <label>Fecha</label>
+      <input title="fecha_creacion" type="number" formControlName="fecha_creacion" class="form-control">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Mascota</label>
+      <select title="mascota" name="mascota" id="mascota" formControlName="mascota" class="form-control">
+        <option [ngValue]="item" *ngFor="let item of mascotas">{{item.nombre}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</div>
+
+<div class="estilo">
+  <p class="barra"></p>
+  <h3 class="title">Historias Clínicas</h3>
+</div>
+
+<div class="estilo">
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Id</th>
+        <th>Fecha</th>
+        <th>Mascota</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of historias">
+        <th>{{item.id}}</th>
+        <th>{{item.fecha_creacion}}</th>
+        <th>{{item.mascota.nombre}}</th>
+        <td>
+          <button type="button" class="btn btn-info" (click)="update(item)">Editar</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="delete(item)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
