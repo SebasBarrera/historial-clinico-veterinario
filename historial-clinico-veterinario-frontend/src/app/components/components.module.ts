@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HistoriaComponent } from './historia/historia.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { ColaboradorComponent } from './colaborador/colaborador.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ColaboradorComponent } from './colaborador/colaborador.component';
     MascotaComponent,
     HistoriaComponent,
     DetalleComponent,
-    ColaboradorComponent
+    ColaboradorComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { ColaboradorComponent } from './colaborador/colaborador.component';
     MascotaComponent,
     HistoriaComponent,
     DetalleComponent,
-    ColaboradorComponent
+    ColaboradorComponent,
+    HomeComponent
   ]
 })
 export class ComponentsModule { }
