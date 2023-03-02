@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'historia-cliniva-veterinaria-frontend'`, () => {
+  it(`should have as title 'historial-clinico-veterinario-frontend'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('historia-cliniva-veterinaria-frontend');
+    expect(app.title).toEqual('historial-clinico-veterinario-frontend');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('historia-cliniva-veterinaria-frontend app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('historial-clinico-veterinario-frontend app is running!');
   });
 });

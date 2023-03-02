@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "historia-cliniva-veterinaria-frontend": {
+    "historial-clinico-veterinario-frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/historia-cliniva-veterinaria-frontend",
+            "outputPath": "dist/historial-clinico-veterinario-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "historia-cliniva-veterinaria-frontend:build:production"
+              "browserTarget": "historial-clinico-veterinario-frontend:build:production"
             },
             "development": {
-              "browserTarget": "historia-cliniva-veterinaria-frontend:build:development"
+              "browserTarget": "historial-clinico-veterinario-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "historia-cliniva-veterinaria-frontend:build"
+            "browserTarget": "historial-clinico-veterinario-frontend:build"
           }
         },
         "test": {
