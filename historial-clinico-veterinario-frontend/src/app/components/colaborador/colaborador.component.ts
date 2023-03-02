@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { ColaboradorService } from 'src/app/services/colaborador/colaborador.service';
+import { Observable } from 'rxjs/internal/Observable';
+import { map } from 'rxjs/internal/operators/map';
 
 @Component({
   selector: 'app-colaborador',
@@ -38,17 +40,17 @@ export class ColaboradorComponent implements OnInit {
       cargo: ['', Validators.required],
       especialidad: ['', Validators.required],
       tipo_documento: ['', Validators.required],
-      documento_identificacion: ['', Validators.required],
+      documento_identificacion: ['', Validators.required]
     });
 
-    this.colaboradorService.getAll().subscribe(
-      (resp) => {
-        this.colaboradores = resp;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+    this.colaboradorService.getAll().subscribe({
+      next: (resp) => this.colaboradores,
+      error: (e) => console.error(e)
+    });
+  }
+
+  getColaboradores(): void {
+    console.log("HOLAAAAA")
   }
 
   save(): void {
@@ -88,3 +90,19 @@ export class ColaboradorComponent implements OnInit {
     });
   }
 }
+  function next(resp: any): ((value: any) => void) | Partial<import("rxjs").Observer<any>> | null | undefined {
+    throw new Error('Function not implemented.');
+  }
+
+  function getColaboradores() {
+    throw new Error('Function not implemented.');
+  }
+
+  function save() {
+    throw new Error('Function not implemented.');
+  }
+
+  function update(colaborador: any, arg1: { id: any; nombre: any; apellido: any; cargo: any; especialidad: any; tipo_documento: any; documento_identificacion: any; }) {
+    throw new Error('Function not implemented.');
+  }
+
