@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.NamedQuery;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotEmpty;
@@ -42,5 +43,7 @@ public class Colaborador {
 	@Column(nullable = false, unique = true)
 	@NotNull(message = "El numero de identificación no puede estar vacio")
 	private int documento_identificacion;
+	@OneToOne
+	private Detalle_Historia_Clinica detalle;
 	
 }

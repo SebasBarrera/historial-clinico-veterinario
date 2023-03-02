@@ -1,6 +1,5 @@
 package com.control.veterinaria.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -41,5 +40,5 @@ public class Historia_Clinica {
 	private Mascota mascota;
 	@OneToMany(mappedBy = "id")
 	@JsonIgnore
-	private List<Detalle_Historia_Clinica> detallesHistoriaClinica = new ArrayList<Detalle_Historia_Clinica>();
+	private List<Detalle_Historia_Clinica> detallesHistoriaClinica;
 }

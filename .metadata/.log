@@ -11677,3 +11677,45 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.ui 2 2 2023-03-02 02:37:34.144
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:33.606
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:33.606
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@88012cf[org.springframework.tooling.boot.ls:1.30.0.202201310805(id=564)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:33.606
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:34.971
+!MESSAGE Boot LS startup time from start to initialized: 1364ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:35.021
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.LnkXlLWdisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:35.022
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:35.022
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:35.022
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:35.023
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:35.023
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.LnkXlLWd => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:35.028
+!MESSAGE classpath=111 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:35.031
+!MESSAGE buffering callback sts4.classpath.LnkXlLWd historial-clinico-veterinario-backend false 111
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:35.031
+!MESSAGE executing callback sts4.classpath.LnkXlLWd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-03-02 02:39:35.250
+!MESSAGE executing callback sts4.classpath.LnkXlLWd SUCCESS [done]

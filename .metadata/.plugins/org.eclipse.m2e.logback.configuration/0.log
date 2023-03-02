@@ -3131,3 +3131,27 @@
 2023-03-02 02:37:38,356 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
 2023-03-02 02:38:10,328 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
 2023-03-02 02:38:10,335 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-02 02:38:10,337 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-03-02 02:40:28,404 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-02 02:40:28,409 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-02 02:40:28,410 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-03-02 02:41:33,888 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-02 02:41:33,893 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-02 02:41:33,894 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-03-02 02:42:28,638 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-02 02:42:28,642 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-02 02:42:28,643 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-03-02 02:42:50,690 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-02 02:42:50,702 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-02 02:42:50,706 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-03-02 02:43:03,536 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-02 02:43:03,543 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-02 02:43:03,546 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-03-02 02:43:28,448 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-02 02:43:28,452 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-02 02:43:28,453 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-03-02 02:44:39,883 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-02 02:44:39,888 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-02 02:44:39,889 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\historial-clinico-veterinario-backend\src\test\resources
+2023-03-02 02:45:34,154 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-02 02:45:34,157 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource

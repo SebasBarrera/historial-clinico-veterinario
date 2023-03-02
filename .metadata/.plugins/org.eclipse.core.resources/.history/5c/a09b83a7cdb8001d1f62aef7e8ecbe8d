@@ -57,7 +57,7 @@ public class Detalle_Historia_Clinica {
 	@NotEmpty(message = "La Observación no puede estar vacia")
 	private String observacion;
 	@ManyToOne
-	@JoinColumn(name="detalle_historia_clinica_id")
+	@JoinColumn(name="historia_clinica_id")
 	private Historia_Clinica historias_clinicas;
 	@OneToOne
 	@JoinColumn(name="colaborador_id")

@@ -49,7 +49,7 @@ public class Usuario {
 	@Column(nullable = false)
 	@NotNull(message = "El sexo no puede estar vacio")
 	private int sexo;
-	@OneToMany(mappedBy = "usuario")
+	@OneToMany(mappedBy = "id")
 	@JsonIgnore
 	private List<Mascota> mascotas;
 }

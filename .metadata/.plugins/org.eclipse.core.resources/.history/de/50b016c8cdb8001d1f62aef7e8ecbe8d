@@ -1,6 +1,6 @@
 package com.control.veterinaria.model;
 
-import java.util.ArrayList;
+import java.time.LocalTime;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -35,11 +35,11 @@ public class Historia_Clinica {
 	private int id;
 	@Column(nullable = false)
 	@NotNull(message = "La Fecha de creacion no puede estar vacia")
-	private int fecha_creacion;
+	private LocalTime fecha_creacion;
 	@OneToOne
 	@JoinColumn(name="mascota_id")
 	private Mascota mascota;
 	@OneToMany(mappedBy = "id")
 	@JsonIgnore
-	private List<Detalle_Historia_Clinica> detallesHistoriaClinica = new ArrayList<Detalle_Historia_Clinica>();
+	private List<Detalle_Historia_Clinica> detallesHistoriaClinica;
 }
