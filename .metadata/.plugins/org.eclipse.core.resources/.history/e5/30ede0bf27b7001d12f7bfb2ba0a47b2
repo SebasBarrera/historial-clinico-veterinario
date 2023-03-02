@@ -1,0 +1,19 @@
+package com.control.veterinaria.dao.implementations;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Repository;
+
+import com.control.veterinaria.dao.interfaces.ColaboradorDao;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+
+@Repository
+@Scope("singleton")
+public class ColaboradorDaoImp implements ColaboradorDao {
+	
+	@PersistenceContext
+	private EntityManager em;
+	
+	
+}

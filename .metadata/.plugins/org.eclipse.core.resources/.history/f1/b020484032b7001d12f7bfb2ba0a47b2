@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Colaboradores</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div th:switch="${colaboradores}" class="container my-5">
+		<div class="row">
+			<div class="col-md-10">
+				<h2 th:case="null">No hay colaboradores aun!</h2>
+				<div th:case="*">
+					<h2 class="my-5">Colaboradores</h2>
+					<table class="table table-striped table-responsive-md">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Nombre</th>
+								<th>Apellido</th>
+								<th>Cargo</th>
+								<th>Especialidad</th>
+								<th>Tipo de documento</th>
+								<th>Número de documento</th>
+								<th>Edit</th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+						<!-- List colaboradores -->
+						<div th:each="current : ${colaboradores}" class="card">
+							<tr>
+								<td th:text="${current.id}" />
+								<td th:text="${current.nombre}" />
+								<td th:text="${current.apellido}" />
+								<td th:text="${current.cargo}" />
+								<td th:text="${current.especialidad}" />
+								<td th:text="${current.tipo_documento}" />
+								<td th:text="${current.documento_identificacion}" />
+								<td><a th:href="@{'/colaborador/edit/' + ${current.id}}" class="btn btn-primary">
+								<i class="fas fa-edit mr-1 ml-1"></i></a></td>
+								<td><a th:href="@{'/colaborador/delete/' + ${current.id}}" class="btn btn-primary">
+								<i class="fas fa-user-minus mr-1 ml-1" style="--fa-primary-color: green; --fa-secondary-color: green;"></i></a></td>
+							</tr>
+						</div>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				<p class="my-5">
+					<a href="/colaborador/add" class="btn btn-primary">
+					<i class="fas fa-user-plus mr-1 ml-1" style="--fa-primary-color: green; --fa-secondary-color: green;"></i></a>
+				</p>
+				
+			</div>
+		</div>
+		<a href="/"><i class="fas fa-home ml-2"></i> Volver al menu principal</a>
+	</div>
+</body>
+</html>

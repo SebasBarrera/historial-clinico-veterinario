@@ -1,0 +1,14 @@
+package com.control.veterinaria.dao.interfaces;
+
+import java.util.List;
+
+import com.control.veterinaria.model.Colaborador;
+
+public interface ColaboradorDao {
+	public Colaborador save(Colaborador p);
+	public Colaborador update(Colaborador p);
+	public void delete(Colaborador p);
+	public List<Colaborador> findAll();
+	public Colaborador findById(Integer id);
+	public boolean existsById(Integer id);
+}

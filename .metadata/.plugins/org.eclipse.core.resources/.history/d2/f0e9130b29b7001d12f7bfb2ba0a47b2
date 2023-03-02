@@ -1,0 +1,5 @@
+package com.control.veterinaria.dao.implementations;
+
+public class Detalle_Historia_ClinicaDaoImp {
+
+}

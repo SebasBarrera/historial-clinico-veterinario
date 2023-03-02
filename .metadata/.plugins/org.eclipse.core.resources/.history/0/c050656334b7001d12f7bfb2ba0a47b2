@@ -1,0 +1,61 @@
+package com.control.veterinaria.service.implementations;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.naming.directory.InvalidAttributeIdentifierException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.control.veterinaria.dao.interfaces.ColaboradorDao;
+import com.control.veterinaria.model.Colaborador;
+import com.control.veterinaria.service.interfaces.ColaboradorService;
+
+@Service
+@Transactional
+public class ColaboradorServiceImp implements ColaboradorService {
+	
+	@Autowired
+	private ColaboradorDao dao;
+	
+	@Override
+	public List<Colaborador> findAll() {
+		return dao.findAll();
+	}
+
+	@Override
+	public Optional<Colaborador> findById(int id) {
+		return Optional.of(dao.findById(id));
+	}
+	
+	@Override
+	public boolean ExistById(int id) {
+		return dao.existsById(id);
+	}
+
+	@Override
+	public void deleteById(int id) {
+		dao.delete(findById(id).get());
+	}
+
+	@Override
+	public void save(Colaborador colaborador) throws InvalidAttributeIdentifierException{
+		if (dao.findSameIdentification(colaborador.getDocumento_identificacion()))
+			throw new InvalidAttributeIdentifierException("Este id ya pertenece a otro colaborador");
+		dao.save(colaborador);
+		
+	}
+
+	@Override
+	public void delete(Colaborador colaborador)  {
+		dao.delete(colaborador);
+	}
+
+	@Override
+	public void update(Colaborador colaborador) {
+		dao.update(colaborador);
+	}
+
+}

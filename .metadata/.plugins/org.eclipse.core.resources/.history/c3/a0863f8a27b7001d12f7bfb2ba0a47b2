@@ -1,0 +1,10 @@
+package com.control.veterinaria.dao.implementations;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@Scope("singleton")
+public class ColaboradorDaoImp {
+
+}

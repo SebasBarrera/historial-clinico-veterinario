@@ -1,0 +1,16 @@
+package com.control.veterinaria.dao.interfaces;
+
+import java.util.List;
+
+import com.control.veterinaria.model.Detalle_Historia_Clinica;
+import com.control.veterinaria.model.Historia_Clinica;
+
+public interface Historia_ClinicaDao {
+	public Historia_Clinica save(Historia_Clinica historia);
+	public Historia_Clinica update(Historia_Clinica historia);
+	public void delete(Historia_Clinica historia);
+	public List<Historia_Clinica> findAll();
+	public Historia_Clinica findById(Integer id);
+	public boolean existsById(Integer id);
+	public List<Detalle_Historia_Clinica> findAllDetalleById(int id);
+}

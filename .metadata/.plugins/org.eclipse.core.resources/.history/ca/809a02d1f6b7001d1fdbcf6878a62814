@@ -1,0 +1,97 @@
+package com.control.veterinaria.controller.implementations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.control.veterinaria.businessDelegate.interfaces.MascotaBusinessDelegate;
+import com.control.veterinaria.controller.interfaces.MascotaController;
+import com.control.veterinaria.model.Mascota;
+import com.control.veterinaria.model.Usuario;
+import com.control.veterinaria.service.interfaces.UsuarioService;
+
+@Controller
+public class MascotaControllerImp implements MascotaController {
+	
+	@Autowired
+	private MascotaBusinessDelegate businessDelegate;
+	@Autowired
+	private UsuarioService s;
+	
+	@Override
+	@GetMapping("/mascota/add")
+	public String add(Model model) {
+		model.addAttribute("mascota", new Mascota());
+		return "mascota/add";
+	}
+
+	@Override
+	@GetMapping("/mascota/delete/{id}")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		businessDelegate.deleteById(id);
+		model.addAttribute("mascotas", businessDelegate.findAll());
+		return "mascota/index";
+	}
+
+	@Override
+	@GetMapping("/mascota/")
+	public String index(Model model) {
+		model.addAttribute("mascotas", businessDelegate.findAll());
+		return "mascota/index";
+	}
+
+	@Override
+	@PostMapping("/mascota/add")
+	public String save(@ModelAttribute Mascota mascota, BindingResult bindingResult,
+			Model model, @RequestParam(value = "action", required = true) String action) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("usuarios", s.findAll());
+				model.addAttribute("mascota", mascota);
+				return "mascota/add";
+			}
+			businessDelegate.save(mascota);
+		}
+		return "redirect:/mascota/";
+	}
+
+	@Override
+	@GetMapping("/mascota/edit/{id}")
+	public String show(@PathVariable("id") Integer id, Model model) {
+		Mascota mascota = businessDelegate.findById(id);
+		if (mascota == null)
+			throw new IllegalAccessError("Invalid mascota Id: " + id);
+		model.addAttribute("mascota", mascota);
+		return "mascota/edit";
+	}
+
+	@Override
+	@PostMapping("/mascota/edit/{id}")
+	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
+			@ModelAttribute Mascota mascota, BindingResult bindingResult, Model model) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("mascota", mascota);
+				return "mascota/edit";
+			}
+			businessDelegate.update(mascota);
+			model.addAttribute("mascotas", businessDelegate.findAll());
+		}
+		return "redirect:/mascota/";
+	}
+
+	@Override
+	@GetMapping("/mascota/info/{id}")
+	public String info(@PathVariable("id") Integer id, Model model) {
+		Mascota mascota = businessDelegate.findById(id);
+		model.addAttribute("mascota", mascota);
+		return "mascota/info";
+	}
+	
+}

@@ -1,0 +1,100 @@
+package com.control.veterinaria.controller.implementations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.control.veterinaria.businessDelegate.interfaces.Historia_ClinicaBusinessDelegate;
+import com.control.veterinaria.controller.interfaces.Historia_ClinicaController;
+import com.control.veterinaria.model.Historia_Clinica;
+
+import jakarta.validation.Valid;
+
+@Controller
+public class Historia_ClinicaControllerImp implements Historia_ClinicaController{
+
+	@Autowired
+	private Historia_ClinicaBusinessDelegate businessDelegate;
+	@Override
+	@GetMapping("/historia/add")
+	public String add(Model model) {
+		model.addAttribute("historia", new Historia_Clinica());
+		return "historia/add";
+	}
+
+	@Override
+	@GetMapping("/historia/delete/{id}")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		businessDelegate.deleteById(id);
+		model.addAttribute("historias", businessDelegate.findAll());
+		return "historia/index";
+	}
+
+	@Override
+	@GetMapping("/historia/")
+	public String index(Model model) {
+		model.addAttribute("historias", businessDelegate.findAll());
+		return "historia/index";
+	}
+
+	@Override
+	@PostMapping("/historia/add")
+	public String save(@ModelAttribute @Valid  Historia_Clinica historia, BindingResult bindingResult,
+			Model model, @RequestParam(value = "action", required = true) String action) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("historia", historia);
+				return "historia/add";
+			}
+			businessDelegate.save(historia);
+		}
+		return "redirect:/historia/";
+	}
+
+	@Override
+	@GetMapping("/historia/edit/{id}")
+	public String show(@PathVariable("id") Integer id, Model model) {
+		Historia_Clinica historia = businessDelegate.findById(id);
+		if (historia == null)
+			throw new IllegalAccessError("Invalid historia Id: " + id);
+		model.addAttribute("historia", historia);
+		return "historia/edit";
+	}
+
+	@Override
+	@PostMapping("/historia/edit/{id}")
+	public String update(@PathVariable("id") Integer id, @RequestParam(value = "action", required = true) String action, 
+			@ModelAttribute @Valid  Historia_Clinica historia, BindingResult bindingResult, Model model) {
+		if (!action.equals("Cancel")) {
+			if (bindingResult.hasErrors()) {
+				model.addAttribute("historia", historia);
+				return "historia/edit";
+			}
+			businessDelegate.update(historia);
+			model.addAttribute("historias", businessDelegate.findAll());
+		}
+		return "redirect:/historia/";
+	}
+
+	@Override
+	@GetMapping("/historia/info/{id}")
+	public String info(@PathVariable("id") Integer id, Model model) {
+		Historia_Clinica historia = businessDelegate.findById(id);
+		model.addAttribute("historia", historia);
+		return "historia/info";
+	}
+	
+	@Override
+	@GetMapping("/historia/detalle/{id}")
+	public String indexDetalle(@PathVariable("id") Integer id, Model model) {
+		model.addAttribute("historias", businessDelegate.findAllDetallesById());
+		return "historia/index";
+	}
+	
+}

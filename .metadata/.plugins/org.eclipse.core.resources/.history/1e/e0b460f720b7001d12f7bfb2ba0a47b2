@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Add Person</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container my-5">
+		<h2 class="mb-5">Agregar Colaborador</h2>
+		<div class="row">
+			<div class="col-md-6">
+				<form action="#" th:action="@{/colaborador/add}"
+					th:object="${colaborador}" method="post">
+					<div class="row">
+
+						<div class="form-group col-md-6">
+							<label for="nombre" class="col-form-label">Nombre</label> 
+							<input type="text" th:field="*{nombre}" class="form-control" id="nombre" placeholder="Pepe">
+							<div th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="alert alert-warning"></div>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="apellido" class="col-form-label">Apellido</label> 
+							<input type="text" th:field="*{apellido}" class="form-control" id="apellido" placeholder="Perez">
+							<div th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}" class="alert alert-warning"></div>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="cargo" class="col-form-label">Cargo</label> 
+							<input type="text" th:field="*{cargo}" class="form-control" id="cargo" placeholder="Veterinario"> 
+							<div th:if="${#fields.hasErrors('cargo')}" th:errors="*{cargo}" class="alert alert-warning"></div>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="especialidad" class="col-form-label">Especialidad</label>
+							<input type="text" th:field="*{especialidad}" class="form-control" id="especialidad" placeholder="Cardiologo">
+							<div th:if="${#fields.hasErrors('especialidad')}" th:errors="*{especialidad}" class="alert alert-warning"></div>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="tipo_documento" class="col-form-label">Tipo de documento</label>
+							 <select class="form-control-range" th:field="*{tipo_documento}" id="tipo_documento">
+								<option value="cc">Cedula de Ciudadania</option>
+								<option value="ti">Tarjeta de Identidad</option>
+								<option value="con">Contraseña</option>
+								<option value="pa">Pasaporte</option>
+								<option value="ce">Cedula de Extrangeria</option>
+							</select>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="documento_identificacion" class="col-form-label">Número de documento</label>
+							<input type="text" th:field="*{documento_identificacion}" class="form-control" id="documento_identificacion" placeholder="123456789"> 
+							<div th:if="${#fields.hasErrors('documento_identificacion')}" th:errors="*{documento_identificacion}" class="alert alert-warning"></div>
+						</div>
+
+
+						<div></div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mt-3">
+							<input type="submit" name="action" class="btn btn-primary"
+								value="add Colaborador">
+						</div>
+						<div class="col-md-3 mt-3">
+							<input type="reset" class="btn btn-secondary" value="Clear">
+						</div>
+						<div class="col-md-3 mt-3">
+							<input type="submit" name="action" class="btn btn-secondary"
+								value="Cancel">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

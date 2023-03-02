@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Editar Colaborador</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container my-5">
+		<h2 class="mb-5">Editar Colaborador</h2>
+		<div class="row">
+			<div class="col-md-6">
+				<form action="#" th:action="@{/colaborador/info/{id}(id=*{id})}" th:object="${colaborador}" method="get">
+					<div class="row">
+					
+						<div class="form-group col-md-6">
+							<div th:text="*{id}"></div>
+							<label for="id" class="col-form-label">ID</label> 
+							<input disabled="disabled" type="text" th:field="*{id}" class="form-control" id="id" placeholder="id">
+							<div th:if="${#fields.hasErrors('id')}" th:errors="*{id}" class="alert alert-warning"></div>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="nombre" class="col-form-label">Nombre</label> 
+							<input disabled="disabled" type="text" th:field="*{nombre}" class="form-control" id="nombre" placeholder="Pepe">
+							<div th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="alert alert-warning"></div>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="apellido" class="col-form-label">Apellido</label> 
+							<input disabled="disabled" type="text" th:field="*{apellido}" class="form-control" id="apellido" placeholder="Perez">
+							<div th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}" class="alert alert-warning"></div>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="cargo" class="col-form-label">Cargo</label> 
+							<input disabled="disabled" type="text" th:field="*{cargo}" class="form-control" id="cargo" placeholder="Veterinario"> 
+							<div th:if="${#fields.hasErrors('cargo')}" th:errors="*{cargo}" class="alert alert-warning"></div>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="especialidad" class="col-form-label">Especialidad</label>
+							<input disabled="disabled" type="text" th:field="*{especialidad}" class="form-control" id="especialidad" placeholder="Cardiologo">
+							<div th:if="${#fields.hasErrors('especialidad')}" th:errors="*{especialidad}" class="alert alert-warning"></div>
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="tipo_documento" class="col-form-label">Tipo de documento</label>
+							 <input disabled="disabled" type="text" th:field="*{tipo_documento}" id=tipo_documento class="form-control">
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="documento_identificacion" class="col-form-label">Número de documento</label>
+							<input disabled="disabled"  type="text" inputmode="numeric" th:field="*{documento_identificacion}" class="form-control" id="documento_identificacion" placeholder="123456789"> 
+							<div th:if="${#fields.hasErrors('documento_identificacion')}" th:errors="*{documento_identificacion}" class="alert alert-warning"></div>
+						</div>
+
+
+						<div></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 mt-3">
+							<input type="button" onclick="history.back()" name="go back"
+								value="go back">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
