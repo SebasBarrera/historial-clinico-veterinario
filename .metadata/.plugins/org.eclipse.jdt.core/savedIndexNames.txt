@@ -42,8 +42,8 @@ INDEX VERSION 1.131+C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\.metadata\
 2072055444.index
 3246182439.index
 2547007633.index
-4192786173.index
 2279085444.index
+4192786173.index
 48641708.index
 1981319009.index
 3073977398.index
@@ -102,7 +102,6 @@ INDEX VERSION 1.131+C:\Users\Sebastian\Desktop\tuCompra\pruebaTecnica\.metadata\
 909175768.index
 2572470253.index
 712365992.index
-21561184.index
 3739990941.index
 1259184881.index
 2029462648.index
