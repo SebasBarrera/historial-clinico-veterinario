@@ -8,6 +8,7 @@ import { HistoriaComponent } from './historia/historia.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { ColaboradorComponent } from './colaborador/colaborador.component';
 import { HomeComponent } from './home/home.component';
+import { IndexComponent } from './index/index.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     HistoriaComponent,
     DetalleComponent,
     ColaboradorComponent,
-    HomeComponent
+    HomeComponent,
+    IndexComponent
   ],
   imports: [
     CommonModule,
